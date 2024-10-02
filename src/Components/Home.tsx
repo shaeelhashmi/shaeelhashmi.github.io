@@ -3,7 +3,7 @@ import LinkedIn from "./SVG/Linkedin";
 import { useSelector } from "react-redux";
 import gsap from "gsap";
 import { useRef, useEffect,useState } from "react";
-
+import Google from "./SVG/Google";
 export default function Main() {
   const data = useSelector((state: any) => state.ShowData.name);
   const ref = useRef<HTMLDivElement>(null);
@@ -63,6 +63,7 @@ export default function Main() {
           <a href="https://www.linkedin.com/in/muhammad-shaeel-arshad-hashmi/" className="mx-2" target="_blank" rel="noopener noreferrer">
             <LinkedIn />
           </a>
+          <a href="mailto:shaeelhashmi232@gmail.com"><Google></Google></a>
         </main>
       </div>
        <div ref={skillRef}>
