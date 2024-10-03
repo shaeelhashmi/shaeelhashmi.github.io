@@ -8,17 +8,20 @@ export default function Main() {
   const data = useSelector((state: any) => state.ShowData.name);
   const ref = useRef<HTMLDivElement>(null);
   const skillRef = useRef<HTMLDivElement>(null);
-  const [isEmpty, setIsEmpty] = useState(true);
+  const projectRef=useRef<HTMLDivElement>(null);
+  const [prev, setPrev] = useState('');
   useEffect(() => {
     if(data==''){
       if (skillRef.current) {
         skillRef.current.style.display = 'none';
-        setIsEmpty(true)
+      }if(projectRef.current){
+        projectRef.current.style.display='none';
       }
       gsap.fromTo(ref.current, { opacity: 0 }, { opacity: 1, duration: 3 });
     }
     if (data === 'home' ) {
-        if(!(isEmpty))
+      
+        if(prev==='skills')
         {
         gsap.fromTo(skillRef.current, { x: 0 }, { x: -1000, duration: 1, onComplete: () => {
         if (ref.current) {
@@ -28,12 +31,27 @@ export default function Main() {
       if (skillRef.current) {
         skillRef.current.style.display = 'none';
       }
+      if(projectRef.current){
+        projectRef.current.style.display='none';
+      }
       }});
-    }else{
-      setIsEmpty(false)
+    }else if(prev==='projects')
+    {
+      gsap.fromTo(projectRef.current, { x: 0 }, { x: -1000, duration: 1, onComplete: () => {
+        if (ref.current) {
+          ref.current.style.display = 'block';
+          }
+      gsap.fromTo(ref.current, { x: 1000 }, { x: 0, duration: 1 });
+      if (projectRef.current) {
+        projectRef.current.style.display = 'none';
+      }
+      if(skillRef.current){
+        skillRef.current.style.display='none';
+      }
+      }});
     }
     } else if (data === 'skills') {
-      setIsEmpty(false);
+      if(prev===''|| prev==='home'){
       gsap.fromTo(ref.current, { x: 0 }, { x: -1000, duration: 1, onComplete: () => {
         if (skillRef.current) {
           skillRef.current.style.display = 'block';
@@ -42,9 +60,62 @@ export default function Main() {
       if (ref.current) {
         ref.current.style.display = 'none';
       }
+      if(projectRef.current){
+        projectRef.current.style.display='none';
+      }
       }});
-      
+    }else if(prev==='projects')
+    {
+      gsap.fromTo(projectRef.current, { x: 0 }, { x: -1000, duration: 1, onComplete: () => {
+        if (skillRef.current) {
+          skillRef.current.style.display = 'block';
+          }
+        gsap.fromTo(skillRef.current, { x: 1000 }, { x: 0, duration: 1 });
+      if (projectRef.current) {
+
+        projectRef.current.style.display = 'none';
+      }
+      if(ref.current){
+        ref.current.style.display='none';
+      }
+      }});
     }
+    }else if(data === 'projects'){
+     if(prev===''|| prev==='home'){
+      gsap.fromTo(ref.current, { x: 0 }, { x: -1000, duration: 1, onComplete: () => {
+        if (projectRef.current) {
+          projectRef.current.style.display = 'block';
+          }
+      
+        gsap.fromTo(projectRef.current, { x: 1000 }, { x: 0, duration: 1 });
+      if (ref.current) {
+        ref.current.style.display = 'none';
+      }
+      if(skillRef.current){
+        skillRef.current.style.display='none';
+      }
+      }});
+    }else if(prev==='skills')
+    {
+      gsap.fromTo(skillRef.current, { x: 0 }, { x: -1000, duration: 1, onComplete: () => {
+        if (projectRef.current) {
+          projectRef.current.style.display = 'block';
+         
+          }
+      
+        gsap.fromTo(projectRef.current, { x: 1000 }, { x: 0, duration: 1 });
+      if (skillRef.current) {
+        skillRef.current.style.display = 'none';
+      }
+      if(ref.current){
+        ref.current.style.display='none';
+      }
+      }});
+    }
+   
+    }
+    setPrev(data);
+    
   }, [data]);
 
   return (
@@ -68,6 +139,9 @@ export default function Main() {
       </div>
        <div ref={skillRef}>
         <h1 className="overflow-hidden text-4xl font-bold text-center transition-all duration-700">Skills</h1>
+      </div>
+      <div ref={projectRef}>
+        <h1 className="overflow-hidden text-4xl font-bold text-center transition-all duration-700">Projects</h1>
       </div>
     </div>
   );
