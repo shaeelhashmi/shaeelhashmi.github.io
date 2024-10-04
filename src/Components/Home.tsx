@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import gsap from "gsap";
 import { useRef, useEffect,useState } from "react";
 import Google from "./SVG/Google";
+import Skills from "./Skills";
 export default function Main() {
   const data = useSelector((state: any) => state.ShowData.name);
   const ref = useRef<HTMLDivElement>(null);
@@ -119,7 +120,7 @@ export default function Main() {
   }, [data]);
 
   return (
-    <div className="h-[100px]">
+    <div className="h-[300px]">
       <div ref={ref}>
         <header className="z-10">
           <h1 className="text-3xl font-bold text-center">
@@ -139,6 +140,7 @@ export default function Main() {
       </div>
        <div ref={skillRef}>
         <h1 className="overflow-hidden text-4xl font-bold text-center transition-all duration-700">Skills</h1>
+        <Skills />
       </div>
       <div ref={projectRef}>
         <h1 className="overflow-hidden text-4xl font-bold text-center transition-all duration-700">Projects</h1>
