@@ -23,7 +23,7 @@ export default function Pipe(props: any) {
   ], true);
 
   const { camera, scene } = useThree();
-  scene.fog = new THREE.Fog(0x000000, 3, 4);
+  scene.fog = new THREE.Fog(0x180023, 3, 4);
   useFrame(() => {
     const t = 0; // Start of the curve
     if (ref.current) {

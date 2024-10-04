@@ -15,13 +15,13 @@ export default function Footer() {
   const dispatch = useDispatch()
   return (
     <footer className="z-10 flex flex-col items-center justify-center p-2 overflow-hidden lg:flex-row" ref={ref}>
-    <button className='w-[200px] p-3 m-10  rounded-lg' onClick={() => dispatch(setShow('home'))}>
+    <button className='w-[200px] p-3 mx-10   rounded-lg' onClick={() => dispatch(setShow('home'))}>
         Home
       </button>
-      <button  className='w-[200px] p-3 m-10  rounded-lg' onClick={() => dispatch(setShow('skills'))}>
+      <button  className='w-[200px] p-3 mx-10   rounded-lg' onClick={() => dispatch(setShow('skills'))}>
         Skills
       </button>
-      <button className='w-[200px] p-3 m-10  rounded-lg' onClick={() => dispatch(setShow('projects'))}>
+      <button className='w-[200px] p-3 mx-10  rounded-lg' onClick={() => dispatch(setShow('projects'))}>
         Projects
       </button>
       

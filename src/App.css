@@ -4,8 +4,23 @@
     padding: 0;
     box-sizing: border-box;
   }
+  .noScroll {
+    overflow-x: auto; /* Keep overflow for scrolling */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+  }
+  
+  .noScroll::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+  }
   body{
     overflow: hidden;
+    background: linear-gradient(90deg, #0d0012, #180023,#0d0012);
+    background: -webkit-linear-gradient(90deg, #3a1e1a, #2f2e2c); /* Safari */
+    background: -moz-linear-gradient(90deg, #3a1e1a, #2f2e2c); /* Firefox */
+    background: -o-linear-gradient(90deg, #3a1e1a, #2f2e2c); /* Opera */
+    background-color: black;
   }
   @keyframes square-animation {
     0% {
