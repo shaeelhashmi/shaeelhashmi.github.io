@@ -120,13 +120,13 @@ export default function Main() {
   }, [data]);
 
   return (
-    <div className="h-[300px]">
+    <div className="sm:h-[300px] h-[200px]">
       <div ref={ref}>
         <header className="z-10">
-          <h1 className="text-3xl font-bold text-center">
+          <h1 className="text-xl font-bold text-center md:text-3xl sm:text-2xl">
             Hi I'm Muhammad Shaeel Arshad Hashmi
           </h1>
-          <p className="text-base text-center">Web developer</p>
+          <p className="text-sm text-center sm:text-base">Web developer</p>
         </header>
         <main className="z-20 flex justify-center mt-4">
           <a href="https://github.com/shaeelhashmi" className="mx-2" target="_blank" rel="noopener noreferrer">
