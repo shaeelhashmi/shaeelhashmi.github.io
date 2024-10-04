@@ -14,12 +14,22 @@ import Git from "./SVG/Skills/Git";
 import Three from "./SVG/Skills/Three";
 import GsapSvg from "./SVG/Skills/GsapSvg";
 import Bootstrap from "./SVG/Skills/Bootstrap";
+import { useState } from "react";
 export default function Skills() {
   const ref=useRef<HTMLDivElement>(null)
+  const [scroll,isScroll]=useState(false)
   const Move=(direction:number)=>{
-    if(window.innerWidth>640)ref.current?.scrollBy({left:direction * 140,behavior:"smooth"})
-    else ref.current?.scrollBy({left:direction * 66,behavior:"smooth"})
-
+    if (ref.current && !scroll) {
+      isScroll(true)
+      const { scrollLeft, clientWidth, scrollWidth } = ref.current;
+      const maxScrollLeft = scrollWidth - clientWidth;
+      const scrollAmount = clientWidth;
+      const newScrollLeft = Math.min(maxScrollLeft, Math.max(0, scrollLeft + direction * scrollAmount));
+      ref.current.scrollTo({ left: newScrollLeft, behavior: "smooth" });
+      setTimeout(() => {
+        isScroll(false)
+      },500)
+    }
   }
   return (
     <div className="flex items-center justify-center ">

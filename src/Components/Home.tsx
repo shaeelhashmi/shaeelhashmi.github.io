@@ -120,7 +120,7 @@ export default function Main() {
   }, [data]);
 
   return (
-    <div className="sm:h-[300px] h-[200px]">
+    <main className="sm:h-[300px] h-[200px]">
       <div ref={ref}>
         <header className="z-10">
           <h1 className="text-xl font-bold text-center md:text-3xl sm:text-2xl">
@@ -128,7 +128,7 @@ export default function Main() {
           </h1>
           <p className="text-sm text-center sm:text-base">Web developer</p>
         </header>
-        <main className="z-20 flex justify-center mt-4">
+        <div className="z-20 flex justify-center mt-4">
           <a href="https://github.com/shaeelhashmi" className="mx-2" target="_blank" rel="noopener noreferrer">
             <Github />
           </a>
@@ -136,7 +136,7 @@ export default function Main() {
             <LinkedIn />
           </a>
           <a href="mailto:shaeelhashmi232@gmail.com"><Google></Google></a>
-        </main>
+        </div>
       </div>
        <div ref={skillRef}>
         <h1 className="overflow-hidden text-4xl font-bold text-center transition-all duration-700">Skills</h1>
@@ -145,6 +145,6 @@ export default function Main() {
       <div ref={projectRef}>
         <h1 className="overflow-hidden text-4xl font-bold text-center transition-all duration-700">Projects</h1>
       </div>
-    </div>
+    </main>
   );
 }
