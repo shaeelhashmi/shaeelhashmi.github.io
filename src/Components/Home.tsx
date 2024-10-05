@@ -121,7 +121,7 @@ export default function Main() {
   }, [data]);
 
   return (
-    <main className=" sm:h-[500px] h-[300px]">
+    <main className=" sm:h-[500px] h-[350px]">
       <div ref={ref}>
         <header className="z-10">
           <h1 className="text-xl font-bold text-center md:text-3xl sm:text-2xl">

@@ -7,7 +7,7 @@ interface props{
 export default function ProjectBox(props:props) {
 
   return (
-    <div className="w-[200px] md:h-[250px] h-[230px]  z-0 flex flex-col justify-between border-solid card transition-all duration-700 relative" style={{
+    <div className="md:w-[200px] w-[220px] md:h-[250px] h-[230px]  z-0 flex flex-col justify-between border-solid card transition-all duration-700 relative" style={{
       background: `linear-gradient(to bottom right, #D40000, #FF5500)`,
        }}>  
           
