@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { useRef, useEffect,useState } from "react";
 import Google from "./SVG/Google";
 import Skills from "./Skills";
+import Project from "./Project";
 export default function Main() {
   const data = useSelector((state: any) => state.ShowData.name);
   const ref = useRef<HTMLDivElement>(null);
@@ -120,7 +121,7 @@ export default function Main() {
   }, [data]);
 
   return (
-    <main className="sm:h-[300px] h-[200px]">
+    <main className=" sm:h-[500px] h-[300px]">
       <div ref={ref}>
         <header className="z-10">
           <h1 className="text-xl font-bold text-center md:text-3xl sm:text-2xl">
@@ -139,11 +140,13 @@ export default function Main() {
         </div>
       </div>
        <div ref={skillRef}>
-        <h1 className="overflow-hidden text-4xl font-bold text-center transition-all duration-700">Skills</h1>
+        <h1 className="text-4xl font-bold text-center transition-all duration-700 ">Skills</h1>
         <Skills />
       </div>
       <div ref={projectRef}>
-        <h1 className="overflow-hidden text-4xl font-bold text-center transition-all duration-700">Projects</h1>
+        <h1 className="text-4xl font-bold text-center transition-all duration-700 ">Projects</h1>
+        
+        <Project />
       </div>
     </main>
   );

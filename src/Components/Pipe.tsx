@@ -36,8 +36,7 @@ export default function Pipe(props: any) {
   });
   useFrame(() => {
     const time = Date.now()/2;
-    const looptime =( 25000000)/window.innerWidth;
-    console.log(looptime)
+    const looptime =20000;
     const t = (time % looptime) / looptime;
     if (ref.current) {
       const tubeGeometry = ref.current.geometry as THREE.TubeGeometry;
