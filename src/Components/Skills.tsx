@@ -46,7 +46,6 @@ export default function Skills() {
         <div className="flex-shrink-0 mx-2 sm:mx-5"><Bootstrap/></div>
         <div className="flex-shrink-0 mx-2 sm:mx-5"><ReactSVG /></div>
         <div className="flex-shrink-0 mx-2 sm:mx-5"><Three /></div>
-
         <div className="flex-shrink-0 mx-2 sm:mx-5"><GsapSvg /></div>
         <div className="flex-shrink-0 mx-2 sm:mx-5 bg-white rounded-[50%]"><ExpressJs /></div>
         <div className="flex-shrink-0 mx-2 sm:mx-5"><NodeJs /></div>

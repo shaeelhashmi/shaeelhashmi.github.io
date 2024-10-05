@@ -17,7 +17,6 @@ export default function App() {
       </div>
         <Canvas1 />
       </Suspense>
-     
     </div>
   )
 }
