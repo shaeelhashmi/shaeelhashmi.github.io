@@ -4,7 +4,6 @@ import './index.css'
 import Footer from './Components/Footer'
 import Home from './Components/Home'
 import Loader from './Components/Loader'
-
 const Canvas1 = lazy(() => import('./Components/Canvas1'))
 
 export default function App() {
