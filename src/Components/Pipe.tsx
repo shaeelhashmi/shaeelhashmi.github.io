@@ -36,7 +36,8 @@ export default function Pipe(props: any) {
   });
   useFrame(() => {
     const time = Date.now()/2;
-    const looptime = 20 * 1000;
+    const looptime =( 25000000)/window.innerWidth;
+    console.log(looptime)
     const t = (time % looptime) / looptime;
     if (ref.current) {
       const tubeGeometry = ref.current.geometry as THREE.TubeGeometry;
@@ -59,32 +60,32 @@ export default function Pipe(props: any) {
   return (
     <>
       <mesh {...props} scale={[1, 1, 1]} ref={ref}>
-        <tubeGeometry args={[curve, 70, 1, 20, true]}></tubeGeometry>
+        <tubeGeometry args={[curve, 70, window.innerWidth/1440, 20, true]}></tubeGeometry>
         <meshStandardMaterial  color={0xfffff} side={THREE.DoubleSide}  fog  wireframe/>
         {Array.from({ length: 32 }).map((_, index) => {
           const t = index / 32;
           const point = curve.getPointAt(t);
-          point.x += Math.random() - 0.3;
-          point.z += Math.random() - 0.3;
+          const normal = curve.getTangent(t).normalize();
+          const binormal = new THREE.Vector3();
+          binormal.crossVectors(normal, new THREE.Vector3(0, 1, 0)).normalize();
+          const radius = window.innerWidth / 1440 ; // Adjust radius based on window size
+          point.add(binormal.multiplyScalar((Math.random() - 0.5) * radius));
           const colour = colours[Math.floor(Math.random() * colours.length)];
           return (
-  
-            <mesh key={index}  scale={[0.3, 0.3, 0.3]} position={point} ref={(boxRef) => { boxRefs.current[index] = boxRef!; }}>
-            <MyLine start={[0, 0, 0]} end={[0.5, 0, 0]} color={colour}/>
-            <MyLine start={[0.5, 0, 0]} end={[0.5, 0.5, 0]} color={colour}/>
-            <MyLine start={[0.5, 0.5, 0]} end={[0, 0.5, 0]} color={colour}/>
-            <MyLine start={[0, 0.5, 0]} end={[0, 0, 0]} color={colour}/>
-            <MyLine start={[0, 0, 0.5]} end={[0.5, 0, 0.5]} color={colour}/>
-            <MyLine start={[0.5, 0, 0.5]} end={[0.5, 0.5, 0.5]} color={colour}/>
-            <MyLine start={[0.5, 0.5, 0.5]} end={[0, 0.5,0.5]} color={colour}/>
-            <MyLine start={[0, 0.5, 0.5]} end={[0, 0, 0.5]} color={colour}/>
-            <MyLine start={[0, 0, 0]} end={[0, 0, 0.5]} color={colour}/>
-            <MyLine start={[0.5, 0, 0]} end={[0.5, 0, 0.5]} color={colour}/>
-            <MyLine start={[0.5, 0.5, 0]} end={[0.5, 0.5, 0.5]} color={colour}/>
-            <MyLine start={[0, 0.5, 0]} end={[0, 0.5,0.5]} color={colour}/>
-      
+            <mesh key={index} scale={[window.innerWidth / 4200, window.innerWidth / 4200, window.innerWidth / 4200]} position={point} ref={(boxRef) => { boxRefs.current[index] = boxRef!; }}>
+              <MyLine start={[0, 0, 0]} end={[0.5, 0, 0]} color={colour} />
+              <MyLine start={[0.5, 0, 0]} end={[0.5, 0.5, 0]} color={colour} />
+              <MyLine start={[0.5, 0.5, 0]} end={[0, 0.5, 0]} color={colour} />
+              <MyLine start={[0, 0.5, 0]} end={[0, 0, 0]} color={colour} />
+              <MyLine start={[0, 0, 0.5]} end={[0.5, 0, 0.5]} color={colour} />
+              <MyLine start={[0.5, 0, 0.5]} end={[0.5, 0.5, 0.5]} color={colour} />
+              <MyLine start={[0.5, 0.5, 0.5]} end={[0, 0.5, 0.5]} color={colour} />
+              <MyLine start={[0, 0.5, 0.5]} end={[0, 0, 0.5]} color={colour} />
+              <MyLine start={[0, 0, 0]} end={[0, 0, 0.5]} color={colour} />
+              <MyLine start={[0.5, 0, 0]} end={[0.5, 0, 0.5]} color={colour} />
+              <MyLine start={[0.5, 0.5, 0]} end={[0.5, 0.5, 0.5]} color={colour} />
+              <MyLine start={[0, 0.5, 0]} end={[0, 0.5, 0.5]} color={colour} />
             </mesh>
-            
           );
         })}
       </mesh>
