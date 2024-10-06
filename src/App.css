@@ -22,6 +22,12 @@
     background: -o-linear-gradient(90deg, #3a1e1a, #2f2e2c); /* Opera */
     background-color: black;
   }
+@media screen and (min-height: 600px) {
+body{
+  overflow: auto;
+}  
+}
+
 
 .card{
   box-shadow: 0px -10px 20px 0px rgba(255, 25, 25, 0.5);

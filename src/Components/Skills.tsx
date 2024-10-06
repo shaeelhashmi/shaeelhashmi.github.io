@@ -35,21 +35,21 @@ export default function Skills() {
     <div className="flex items-center justify-center ">
        <div><button onClick={() => Move(-1)} className="mx-3">
        <Next rotate={true}></Next></button></div>
-      <div className="flex w-[288px] overflow-x-auto justify-start items-center my-32 noScroll sm:w-[570px]" ref={ref}>
-        <div className="flex-shrink-0 mx-2 sm:mx-5"><HTML /></div>
-        <div className="flex-shrink-0 mx-2 sm:mx-5"><CSS /></div>
-        <div className="flex-shrink-0 mx-2 sm:mx-5"><Ts /></div>
-        <div className="flex-shrink-0 mx-2 sm:mx-5"><JS /></div>
-        <div className="flex-shrink-0 mx-2 sm:mx-5"><C /></div>
-        <div className="flex-shrink-0 mx-2 sm:mx-5"><Tailwind /></div>
-        <div className="flex-shrink-0 mx-2 sm:mx-5"><Bootstrap/></div>
-        <div className="flex-shrink-0 mx-2 sm:mx-5"><ReactSVG /></div>
-        <div className="flex-shrink-0 mx-2 sm:mx-5"><Three /></div>
-        <div className="flex-shrink-0 mx-2 sm:mx-5"><GsapSvg /></div>
-        <div className="flex-shrink-0 mx-2 sm:mx-5 bg-white rounded-[50%]"><ExpressJs /></div>
-        <div className="flex-shrink-0 mx-2 sm:mx-5"><NodeJs /></div>
-        <div className="flex-shrink-0 mx-2 sm:mx-5"><Mongo /></div>
-        <div className="flex-shrink-0 mx-2 sm:mx-5"><Git /></div>
+      <div className="flex xs:w-[288px] overflow-x-auto justify-start items-center my-32 noScroll sm:w-[570px] w-[264px]" ref={ref}>
+        <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><HTML /></div>
+        <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><CSS /></div>
+        <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><Ts /></div>
+        <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><JS /></div>
+        <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><C /></div>
+        <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><Tailwind /></div>
+        <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><Bootstrap/></div>
+        <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><ReactSVG /></div>
+        <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><Three /></div>
+        <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><GsapSvg /></div>
+        <div className="flex-shrink-0 xs:mx-2 sm:mx-5 mx-1 bg-white rounded-[50%]"><ExpressJs /></div>
+        <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><NodeJs /></div>
+        <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><Mongo /></div>
+        <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><Git /></div>
       </div>
       <div><button onClick={() => Move(1)}  className="mx-3">
       <Next rotate={false}></Next></button></div>
