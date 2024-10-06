@@ -6,7 +6,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'xs':  {'min': '400px', 'max': '639px' }, // Custom screen size for 400px
+        'xsh': { 'raw': '(min-height: 520px)' },
+      },
+    },
   },
   plugins: [],
 }

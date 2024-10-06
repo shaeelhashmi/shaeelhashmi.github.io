@@ -14,6 +14,7 @@ export default function Line(props: any) {
       <line ref={ref}>
         <bufferGeometry />
         <lineBasicMaterial color={color} />
+        
       </line>
     );
 }
