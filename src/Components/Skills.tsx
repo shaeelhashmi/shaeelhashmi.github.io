@@ -35,7 +35,7 @@ export default function Skills() {
     <div className="flex items-center justify-center ">
        <div><button onClick={() => Move(-1)} className="mx-3">
        <Next rotate={true}></Next></button></div>
-      <div className="flex xs:w-[288px] overflow-x-auto justify-start items-center my-32 noScroll sm:w-[570px] w-[264px]" ref={ref}>
+      <div className="flex xs:w-[288px] overflow-x-auto justify-start items-center my-32 noScroll sm:w-[570px] w-[264px] height" ref={ref}>
         <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><HTML /></div>
         <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><CSS /></div>
         <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><Ts /></div>

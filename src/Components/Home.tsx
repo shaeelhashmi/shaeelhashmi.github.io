@@ -121,16 +121,16 @@ export default function Main() {
   }, [data]);
 
   return (
-    <main className=" sm:h-[500px] h-[350px]">
-      <div ref={ref} className="md:w-[600px] mx-auto sm:w-[500px] xs:w-[350px] w-[260px]">
+    <main className=" sm:h-[500px] h-[350px] reduced2">
+      <div ref={ref} className="md:w-[600px] mx-auto sm:w-[500px] xs:w-[350px] w-[260px]  z-10 width ">
         <header className="z-10">
-          <h1 className="text-xl font-bold text-center md:text-3xl sm:text-2xl"
+          <h1 className="text-xl font-bold text-center md:text-3xl sm:text-2xl setHeading init height2"
           >
             Muhammad Shaeel Arshad Hashmi
           </h1>
-          <p className="text-sm text-center sm:text-base" >Web developer</p> 
+          <p className="text-sm font-bold text-center sm:text-base" >Web developer</p> 
         </header>
-        <div className="z-20 flex justify-center mt-4">
+        <div className="z-20 flex justify-center mt-4 ">
           <a href="https://github.com/shaeelhashmi" className="mx-2" target="_blank">
             <Github />
           </a>
@@ -139,14 +139,16 @@ export default function Main() {
           </a>
           <a href="mailto:shaeelhashmi232@gmail.com"><Google></Google></a>
         </div>
-        <p className="xsh:md:my-10 xs:text-sm sm:text-base text-[0.7rem] my-2">Hi I’m Muhammad Shaeel Arshad Hashmi, a full-stack developer currently pursuing my Bachelor's degree in Computer Science at Bahria University. I specialize in modern web technologies, particularly the MERN stack (MongoDB, Express, React, and Node.js). With a passion for creating dynamic and responsive web applications, I am dedicated to delivering seamless user experiences. Beyond development, I possess strong problem-solving skills, honed through algorithm design and competitive programming. Whether you're looking for a developer to build full-scale applications or improve performance, I’m excited to help bring your vision to life.</p>
+        <p className="md:my-10 xs:text-sm sm:text-base text-[0.7rem] my-2  p-1 reduced md:mt-12 mt-1"
+         style={{ textShadow: '0 0 1px white' }}
+         >Hi I’m Muhammad Shaeel Arshad Hashmi, a full-stack developer currently pursuing my Bachelor's degree in Computer Science at Bahria University. I specialize in modern web technologies, particularly the MERN stack (MongoDB, Express, React, and Node.js). With a passion for creating dynamic and responsive web applications, I am dedicated to delivering seamless user experiences. Beyond development, I possess strong problem-solving skills, honed through algorithm design and competitive programming. Whether you're looking for a developer to build full-scale applications or improve performance, I’m excited to help bring your vision to life.</p>
       </div>
        <div ref={skillRef}>
-        <h1 className="text-4xl font-bold text-center transition-all duration-700 ">Skills</h1>
+        <h1 className="text-xl font-bold text-center transition-all duration-700 setHeading md:text-3xl sm:text-2xl">Skills</h1>
         <Skills />
       </div>
       <div ref={projectRef}>
-        <h1 className="text-4xl font-bold text-center transition-all duration-700 ">Projects</h1>
+        <h1 className="text-xl font-bold text-center transition-all duration-700 setHeading md:text-3xl sm:text-2xl">Projects</h1>
         
         <Project />
       </div>

@@ -22,16 +22,33 @@
     background: -o-linear-gradient(90deg, #3a1e1a, #2f2e2c); /* Opera */
     background-color: black;
   }
-@media screen and (min-height: 600px) {
-body{
-  overflow: auto;
-}  
+@media screen and (max-height: 500px) {
+  body{
+    overflow: auto;
+  } 
+}
+@media screen and (max-height: 620px) {
+ 
+
+.width{
+  width: 80% !important;
+}
+.reduced2{
+  height: 350px !important;
+}
+}
+@media screen and (max-height: 580px) and (max-width: 768px) {
+  .reduced{
+    margin-top: auto !important;
+    margin-bottom: 0px !important;
+    font-size: x-small !important;
+    padding: 0px !important;  
+  }
+  .init{
+    margin-top: 0px !important;
+  }
 }
 
-
-.card{
-  box-shadow: 0px -10px 20px 0px rgba(255, 25, 25, 0.5);
-}
   @keyframes square-animation {
     0% {
      left: 0;
