@@ -1,9 +1,10 @@
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { setShow } from "../Slice/ShowData"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
-import { useRef } from "react"
+import {  useRef } from "react"
 export default function Footer() {
+  const data=useSelector((state:any)=>state.ShowData.name);
   const ref=useRef(null)
   useGSAP(
     () => {
@@ -14,16 +15,25 @@ export default function Footer() {
   )
   const dispatch = useDispatch()
   return (
-    <footer className="z-10 flex flex-col items-center justify-between p-2 overflow-hidden md:flex-row" ref={ref}>
-    <button className='w-[220px] p-3   rounded-lg sm:text-lg text-base mx-2' onClick={() => dispatch(setShow('home'))}>
+    <footer className="z-10 grid  w-[90vw] grid-cols-3 p-2 mb-0 xsh:mt-2 place-content-center mx-auto" ref={ref}>
+      <div className="mx-auto">
+      <button className='sm:w-[220px] w-[100px] p-3   rounded-lg sm:text-lg text-base mx-2  text-center' onClick={() => dispatch(setShow('home'))}>
         Home
       </button>
-      <button  className='w-[220px] p-3   rounded-lg sm:text-lg text-base mx-2' onClick={() => dispatch(setShow('skills'))}>
+      <div className={`sm:w-[220px] w-[100px] h-[2px] bg-white mx-auto ${data==='home'|| data==''?'scale-x-100':'scale-x-0'} origin-left duration-500 transition-all `} ></div>
+      </div>
+   
+      <div className="mx-auto"><button  className='sm:w-[220px] w-[100px] p-3   rounded-lg sm:text-lg text-base mx-2 text-center' onClick={() => dispatch(setShow('skills'))}>
         Skills
       </button>
-      <button className='w-[220px] p-3   rounded-lg sm:text-lg text-base mx-2' onClick={() => dispatch(setShow('projects'))}>
+      <div className={`sm:w-[220px] w-[100px] h-[2px] bg-white mx-auto ${data==='skills'?'scale-x-100':'scale-x-0'} origin-left duration-500 transition-all`} ></div></div> 
+      <div className="mx-auto">
+      <button className='sm:w-[220px] w-[100px] p-3   rounded-lg sm:text-lg text-base mx-2 text-center' onClick={() => dispatch(setShow('projects'))}>
         Projects
       </button>
+      <div className={`sm:w-[220px] w-[100px] h-[2px] bg-white mx-auto ${data==='projects'?'scale-x-100':'scale-x-0'} origin-left duration-500 transition-all`} ></div>
+      </div>
+    
       
     </footer>
   )
