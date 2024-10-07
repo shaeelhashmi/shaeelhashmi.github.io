@@ -8,7 +8,7 @@ const Canvas1 = lazy(() => import('./Components/Canvas1'))
 
 export default function App() {
   return (
-    <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden overflow-y-auto text-white ">
+    <div className="flex flex-col items-center justify-center w-screen min-h-screen m-0 overflow-x-hidden text-white">
       <Suspense fallback={<Loader />}>
       <div className='z-20'>
         <Home />

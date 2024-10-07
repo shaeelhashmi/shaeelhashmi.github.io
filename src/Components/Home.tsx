@@ -121,8 +121,8 @@ export default function Main() {
   }, [data]);
 
   return (
-    <main className=" sm:h-[500px] h-[350px] reduced2">
-      <div ref={ref} className="md:w-[600px] mx-auto sm:w-[500px] xs:w-[350px] w-[260px]  z-10 width ">
+    <main className=" sm:h-[500px] h-[350px] max-h-screen reduced2 ">
+      <div ref={ref} className="md:w-[600px] mx-auto sm:w-[500px] xs:w-[350px] w-[260px]  z-10  ">
         <header className="z-10">
           <h1 className="text-xl font-bold text-center md:text-3xl sm:text-2xl setHeading init height2"
           >
