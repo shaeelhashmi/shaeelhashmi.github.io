@@ -2,7 +2,7 @@
 
 export default function Three() {
   return (
-    <svg className="sm:w-[150px] sm:h-[150px] w-[80px] h-[80px]"   viewBox="0 0 103 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className="sm:w-[150px] sm:h-[150px] w-[80px] h-[80px] h"   viewBox="0 0 103 104" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g id="threejs">
     <g id="threejs_2">
     <path id="Vector" fillRule="evenodd" clipRule="evenodd" d="M26.7016 102L2 2.00049L101.023 30.5097L26.7016 102Z" stroke="white" strokeWidth="2.2865" strokeMiterlimit="10" strokeLinejoin="round"/>
