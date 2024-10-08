@@ -20,21 +20,32 @@
     background: -moz-linear-gradient(90deg, #3a1e1a, #2f2e2c); /* Firefox */
     background: -o-linear-gradient(90deg, #3a1e1a, #2f2e2c); /* Opera */
     background-color: black;
+    overflow-x: hidden;
   }
-@media screen and (max-height: 500px) {
-  body{
-    overflow: auto;
-  } 
-}
 @media screen and (max-height: 620px) {
- 
-
 .width{
   width: 80% !important;
 }
 .reduced2{
   height: 350px !important;
 }
+.h{
+  width: 80px !important;
+  height: 80px !important;
+}
+.height{
+  width: 360px !important;
+}
+}
+@media screen and (max-height: 620px) and (min-width:  400px) and (max-width:  639px) {
+  .height{
+    width: 288px !important;
+  }
+}
+@media screen and (max-height: 620px) and (max-width:  400px) {
+  .height{
+    width: 264px !important;
+  }
 }
 @media screen and (max-height: 580px) and (max-width: 768px) {
   .reduced{

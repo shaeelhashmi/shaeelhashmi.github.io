@@ -15,7 +15,7 @@ export default function Footer() {
   )
   const dispatch = useDispatch()
   return (
-    <footer className="z-10 grid  w-[90vw] grid-cols-3 p-2 mb-0 xsh:mt-2 place-content-center mx-auto" ref={ref}>
+    <footer className="z-10 grid  w-[90vw] grid-cols-3 p-2 mb-0 mt-2 place-content-center mx-auto" ref={ref}>
       <div className="mx-auto">
       <button className='sm:w-[220px] w-[100px] p-3   rounded-lg sm:text-lg text-base mx-2  text-center' onClick={() => dispatch(setShow('home'))}>
         About me
