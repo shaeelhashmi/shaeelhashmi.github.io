@@ -15,10 +15,10 @@ export default function Footer() {
   )
   const dispatch = useDispatch()
   return (
-    <footer className="z-10 grid  w-[90vw] grid-cols-3 p-2 mb-0 mt-2 place-content-center mx-auto" ref={ref}>
+    <footer className="z-50 grid  w-[90vw] grid-cols-3 p-2 mb-0 mt-2 place-content-center mx-auto" ref={ref}>
       <div className="mx-auto">
       <button className='sm:w-[220px] w-[100px] p-3   rounded-lg sm:text-lg text-base mx-2  text-center' onClick={() => dispatch(setShow('home'))}>
-        About me
+        About
       </button>
       <div className={`sm:w-[220px] w-[100px] h-[2px] bg-white mx-auto ${data==='home'|| data==''?'scale-x-100':'scale-x-0'} origin-left duration-500 transition-all `} ></div>
       </div>
