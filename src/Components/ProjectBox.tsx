@@ -8,7 +8,7 @@ export default function ProjectBox(props:props) {
   return (
     <div className="md:w-[200px] xs:w-[220px] w-[200px] md:h-[250px] h-[230px]   flex flex-col justify-between  transition-all duration-700  z-10  bg-[#a700ef1a] "  >      
         <div >
-        <h1 className="text-xl font-bold text-center">{props.Title}</h1>
+        <h1 className="text-xl font-bold text-center h-[50px] mb-2">{props.Title}</h1>
         </div>
         <div className="h-full p-2 ">
         <p className="xs:text-sm text-[0.8rem] "  style={{ textShadow: '0 0 1px white' }}>{props.description}</p>
