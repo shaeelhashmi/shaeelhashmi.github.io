@@ -14,6 +14,8 @@ import Git from "./SVG/Skills/Git";
 import Three from "./SVG/Skills/Three";
 import GsapSvg from "./SVG/Skills/GsapSvg";
 import Bootstrap from "./SVG/Skills/Bootstrap";
+import Go from "./SVG/Skills/GoSvg";
+import MySql from "./SVG/Skills/MySql";
 import { useState } from "react";
 export default function Skills() {
   const ref=useRef<HTMLDivElement>(null)
@@ -48,7 +50,9 @@ export default function Skills() {
         <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><GsapSvg /></div>
         <div className="flex-shrink-0 xs:mx-2 sm:mx-5 mx-1 bg-white rounded-[50%]"><ExpressJs /></div>
         <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><NodeJs /></div>
+        <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><Go /></div>
         <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><Mongo /></div>
+        <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><MySql /></div>
         <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><Git /></div>
       </div>
       <div><button onClick={() => Move(1)}  className="mx-3">

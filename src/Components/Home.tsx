@@ -144,11 +144,11 @@ export default function Main() {
          >Hi I’m Muhammad Shaeel Arshad Hashmi, a full-stack developer currently pursuing my Bachelor's degree in Computer Science at Bahria University. I specialize in modern web technologies, particularly the MERN stack (MongoDB, Express, React, and Node.js). With a passion for creating dynamic and responsive web applications, I am dedicated to delivering seamless user experiences. Beyond development, I possess strong problem-solving skills, honed through algorithm design and competitive programming. Whether you're looking for a developer to build full-scale applications or improve performance, I’m excited to help bring your vision to life.</p>
       </div>
        <div ref={skillRef}>
-        <h1 className="text-xl font-bold text-center transition-all duration-700 setHeading md:text-3xl sm:text-2xl">Skills</h1>
+        <h1 className="text-3xl font-bold text-center transition-all duration-700 setHeading md:text-4xl ">Skills</h1>
         <Skills />
       </div>
       <div ref={projectRef}>
-        <h1 className="text-xl font-bold text-center transition-all duration-700 setHeading md:text-3xl sm:text-2xl">Projects</h1>
+        <h1 className="text-3xl font-bold text-center transition-all duration-700 setHeading md:text-4xl ">Projects</h1>
         
         <Project />
       </div>
