@@ -17,6 +17,7 @@ import Bootstrap from "./SVG/Skills/Bootstrap";
 import Go from "./SVG/Skills/GoSvg";
 import MySql from "./SVG/Skills/MySql";
 import { useState } from "react";
+import Python from "./SVG/Skills/Python";
 export default function Skills() {
   const ref=useRef<HTMLDivElement>(null)
   const [scroll,isScroll]=useState(false)
@@ -43,6 +44,7 @@ export default function Skills() {
         <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><Ts /></div>
         <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><JS /></div>
         <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><C /></div>
+        <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><Python /></div>
         <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><Tailwind /></div>
         <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><Bootstrap/></div>
         <div className="flex-shrink-0 mx-1 xs:mx-2 sm:mx-5"><ReactSVG /></div>

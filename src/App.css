@@ -34,54 +34,14 @@
   @media (prefers-color-scheme: light) {
      body{
       z-index: 50;
-    background: linear-gradient(90deg, #ada5a5, #e3b7f6,#939393);
-    background: -webkit-linear-gradient(90deg, #939393, #f9ebff,#939393); /* Safari */
-    background: -moz-linear-gradient(90deg, #939393, #f9ebff,#939393); /* Firefox */
-    background: -o-linear-gradient(90deg, #939393, #f9ebff,#939393); /* Opera */
+    background: linear-gradient(90deg, #ada5a5, #e3b7f6,#ada5a5);
+    background: -webkit-linear-gradient(90deg, #ada5a5, #e3b7f6,#ada5a5); /* Safari */
+    background: -moz-linear-gradient(90deg, #ada5a5, #e3b7f6,#ada5a5); /* Firefox */
+    background: -o-linear-gradient(90deg, #ada5a5, #e3b7f6,#ada5a5); /* Opera */
     background-color: rgb(255, 255, 255);
   }
   }
 
-  
-/* .shadow-animation {
-  animation: shadow 1s infinite;
-}
-
-@keyframes shadow {
-  0% {
-    box-shadow: none;
-  }
-  10% {
-    box-shadow: 0 1px 5px 0 rgba(255, 255, 255, 0.3);
-  }
-  20% {
-    box-shadow: 0 2px 10px 0 rgba(255, 255, 255, 0.5);
-  }
-  30% {
-    box-shadow: 0 3px 15px 0 rgba(255, 255, 255, 0.7);
-  }
-  40% {
-    box-shadow: 0 4px 18px 0 rgba(255, 255, 255, 0.8);
-  }
-  50% {
-    box-shadow: 0 5px 20px 0 rgb(255, 255, 255);
-  }
-  60% {
-    box-shadow: 0 4px 18px 0 rgba(255, 255, 255, 0.8);
-  }
-  70% {
-    box-shadow: 0 3px 15px 0 rgba(255, 255, 255, 0.7);
-  }
-  80% {
-    box-shadow: 0 2px 10px 0 rgba(255, 255, 255, 0.5);
-  }
-  90% {
-    box-shadow: 0 1px 5px 0 rgba(255, 255, 255, 0.3);
-  }
-  100% {
-    box-shadow: none;
-  }
-} */
 
   @keyframes square-animation {
     0% {
