@@ -27,6 +27,7 @@ export default function Project() {
        <div className="flex-shrink-0 mx-5"><ProjectBox description="This is a timetable management system that allows users to create custom timetables and perform some added functions for manipulating the time like adding or removing faculty members etc." Title='Time table manager'   Link="https://github.com/shaeelhashmi/Project-TMS"/></div>
        <div className="flex-shrink-0 mx-5"><ProjectBox description="This is a space shooter game made using the C++ framework SFML, implementing the concepts of OOP and utilizing the C++ Standard Template Library for easier data control." Title='Space Invaders'   Link="https://github.com/shaeelhashmi/spaceInvaders"/></div>
        <div className="flex-shrink-0 mx-5"><ProjectBox description="This project builds a personalized News Recommendation System on data scrapped from different websites using Go with SQL for managing user interests and authorization" Title='Recommendation algorithm'   Link="https://github.com/shaeelhashmi/news-recommendation-algorithm"/></div>
+       <div className="flex-shrink-0 mx-5"><ProjectBox description="This is a chat application that allows users to communicate in real time through the use of websockets" Title='Chat application'   Link="https://github.com/shaeelhashmi/Chat-application"/></div>
        </div>
        <div><button onClick={() => Move(1)} className="mx-3">
        <Next rotate={false}></Next></button></div>

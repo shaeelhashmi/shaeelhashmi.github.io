@@ -4,9 +4,10 @@ import * as THREE from 'three';
 import { Mesh } from 'three';
 import MyLine from './Line';
 export default function Pipe(props: any) {
+    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   const ref = useRef<Mesh>(null);
   const boxRefs = useRef<Array<Mesh>>([]);
-  const colours=["#FF0000","#00FF00","#0000FF","#FFFF00","#FF00FF","#00FFFF"];
+  const colours=isDarkMode?["#FF0000","#00FF00","#0000FF","#FFFF00","#FF00FF","#00FFFF"]:["#00363D", "#2F2A00", "#003A00", "#2F0000", "#616800", "#180033"] ;
   const curve = new THREE.CatmullRomCurve3([
     new THREE.Vector3(-10, 0, 3),
     new THREE.Vector3(-7, 5, 0),
@@ -23,7 +24,7 @@ export default function Pipe(props: any) {
   ], true);
 
   const { camera, scene } = useThree();
-  scene.fog = new THREE.Fog(0x180023, 3, 4);
+  scene.fog = new THREE.Fog(isDarkMode?0x12001a:0xe3b7f6, 3, 4);
   useFrame(() => {
     const t = 0; // Start of the curve
     if (ref.current) {
@@ -59,8 +60,8 @@ export default function Pipe(props: any) {
   return (
     <>
       <mesh {...props} scale={[1, 1, 1]} ref={ref}>
-        <tubeGeometry args={[curve, 70, window.innerWidth/1440, 20, true]}></tubeGeometry>
-        <meshStandardMaterial  color={0xfffff} side={THREE.DoubleSide}  fog  wireframe/>
+        <tubeGeometry args={[curve, 70, window.innerWidth/1440, 20, true]} />
+        <meshStandardMaterial color={ 0x7262FF } side={THREE.DoubleSide} fog wireframe />
         {Array.from({ length: 32 }).map((_, index) => {
           const t = index / 32;
           const point = curve.getPointAt(t);
