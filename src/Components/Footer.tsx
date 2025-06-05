@@ -14,7 +14,7 @@ export default function Footer() {
          background: isDarkMode ? "linear-gradient(90deg, #000000, #12001a, #000000)" : "linear-gradient(90deg, #ada5a5, #e3b7f6,#ada5a5)",
       }}
     >
-      <h1 className="text-3xl md:text-5xl font-bold  mb-4 font-serif ">
+      <h1 className="text-3xl md:text-5xl font-bold  mb-4 font-heading ">
         Contact Me
       </h1>
       <div className="flex  items-center justify-center">

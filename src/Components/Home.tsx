@@ -16,7 +16,7 @@ export default function Main() {
       <div ref={ref} className="mx-auto   z-10 min-h-[800px] h-screen  overflow-hidden flex flex-col items-center justify-center ">
        <header className="z-10 mt-14 text-center ">
     <div>
-    <ReactTyped strings={["Hi I'm Muhammad Shaeel Arshad Hashmi"]}  className="text-3xl md:text-5xl font-bold  my-5 font-serif" typeSpeed={40} />
+    <ReactTyped strings={["Hi I'm Muhammad Shaeel Arshad Hashmi"]}  className="text-3xl md:text-5xl font-bold  my-5 font-heading" typeSpeed={40} />
     <br />
 
     <ReactTyped
@@ -43,16 +43,16 @@ export default function Main() {
        
       </div>
        <div ref={skillRef} className="mx-auto  z-10 min-h-[600px] h-[80%]  overflow-hidden flex flex-col items-center justify-center ">
-        <h1 className="text-3xl md:text-5xl font-bold  my-5 font-serif">Skills</h1>
+        <h1 className="text-3xl md:text-5xl font-bold  my-5 font-heading">Skills</h1>
         <Skills />
       </div>
       <div ref={projectRef} className="mx-auto  z-10 min-h-[600px] h-[80%]  overflow-hidden flex flex-col items-center justify-center ">
-        <h1 className="text-3xl md:text-5xl font-bold  my-5 font-serif">Projects</h1>
+        <h1 className="text-3xl md:text-5xl font-bold  my-5 font-heading">Projects</h1>
         
         <Project />
       </div>
       <div ref={projectRef} className="mx-auto  z-10 min-h-[600px] h-[80%]  overflow-hidden flex flex-col items-center justify-center ">
-        <h1 className="text-3xl md:text-5xl font-bold  my-5 font-serif">Experience</h1>
+        <h1 className="text-3xl md:text-5xl font-bold  my-5 font-heading">Experience</h1>
         
         <Experience />
       </div>

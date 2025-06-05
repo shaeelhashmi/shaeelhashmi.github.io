@@ -12,6 +12,7 @@ export default {
         'xsh': { 'raw': '(min-height: 520px)' },
       },
       fontFamily: {
+        'heading':['playfair-display', 'serif'],
         'franklin': ['Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif'],
         'calibri': ['Calibri', 'Arial', 'sans-serif'],
         'times': ['Times New Roman', 'serif'],
