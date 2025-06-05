@@ -1,5 +1,5 @@
 
-import { useLayoutEffect,useRef } from "react";
+import {  useLayoutEffect,useRef } from "react";
 import { Vector3 } from "three";
 export default function Line(props: any) {
     const ref = useRef<any>(); // Use 'any' type for 'ref' since it can be 'undefined'
@@ -9,11 +9,13 @@ export default function Line(props: any) {
         ref.current.geometry.setFromPoints([start, end].map(point => new Vector3(...point))); // Use 'Vector3' instead of 'THREE.Vector3'
       }
     }, [start, end]);
-  
+
     return (
       <line ref={ref}>
         <bufferGeometry />
-        <lineBasicMaterial color={color} />
+  <lineBasicMaterial color={color} toneMapped={true} />
+
+
         
       </line>
     );

@@ -5,12 +5,12 @@ export default function Python() {
 <path d="M257.225 510.108C386.89 510.108 378.793 453.878 378.793 453.878L378.648 395.624H254.912V378.133H427.796C427.796 378.133 510.768 387.543 510.768 256.71C510.768 125.877 438.348 130.517 438.348 130.517H395.127V191.228C395.127 191.228 397.457 263.648 323.863 263.648H201.139C201.139 263.648 132.188 262.534 132.188 330.286V442.314C132.188 442.314 121.72 510.108 257.225 510.108ZM325.453 470.935C313.143 470.935 303.192 460.985 303.192 448.674C303.192 436.363 313.143 426.413 325.453 426.413C337.764 426.413 347.714 436.363 347.714 448.674C347.714 460.985 337.764 470.935 325.453 470.935Z" fill="url(#paint1_linear_102_1532)"/>
 <defs>
 <linearGradient id="paint0_linear_102_1532" x1="49.0857" y1="47.7029" x2="302.204" y2="298.296" gradientUnits="userSpaceOnUse">
-<stop stop-color="#387EB8"/>
-<stop offset="1" stop-color="#366994"/>
+<stop stopColor="#387EB8"/>
+<stop offset="1" stopColor="#366994"/>
 </linearGradient>
 <linearGradient id="paint1_linear_102_1532" x1="204.45" y1="208.617" x2="476.271" y2="465.579" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFE052"/>
-<stop offset="1" stop-color="#FFC331"/>
+<stop stopColor="#FFE052"/>
+<stop offset="1" stopColor="#FFC331"/>
 </linearGradient>
 </defs>
 </svg>

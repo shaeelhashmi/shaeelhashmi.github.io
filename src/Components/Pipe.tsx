@@ -7,7 +7,7 @@ export default function Pipe(props: any) {
     const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   const ref = useRef<Mesh>(null);
   const boxRefs = useRef<Array<Mesh>>([]);
-  const colours=isDarkMode?["#FF0000","#00FF00","#0000FF","#FFFF00","#FF00FF","#00FFFF"]:["#00363D", "#2F2A00", "#003A00", "#2F0000", "#616800", "#180033"] ;
+  const colours=isDarkMode?["#FF0000","#00FF00","#0000FF","#FFFF00","#FF00FF","#00FFFF"]:["#0A0067","#00293D","#002A03","#220025","#250000","#1A0700"] ;
   const curve = new THREE.CatmullRomCurve3([
     new THREE.Vector3(-10, 0, 3),
     new THREE.Vector3(-7, 5, 0),
@@ -85,6 +85,7 @@ export default function Pipe(props: any) {
               <MyLine start={[0.5, 0, 0]} end={[0.5, 0, 0.5]} color={colour} />
               <MyLine start={[0.5, 0.5, 0]} end={[0.5, 0.5, 0.5]} color={colour} />
               <MyLine start={[0, 0.5, 0]} end={[0, 0.5, 0.5]} color={colour} />
+    
             </mesh>
           );
         })}

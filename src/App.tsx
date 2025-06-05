@@ -4,6 +4,7 @@ import './index.css'
 import Particles from './Components/ParticleDesign'
 import Home from './Components/Home'
 import Loader from './Components/Loader'
+import Footer from './Components/Footer'
 const Canvas1 = lazy(() => import('./Components/Canvas1'))
 
 export default function App() {
@@ -14,9 +15,9 @@ export default function App() {
         <Particles />
       </div>
 
-      <div className="relative z-10 w-full">
+      <div className="w-full dark:text-white text-black">
         <Home />
- 
+        <Footer />
       </div>
   
       <div className='fixed h-screen top-0 bottom-0 left-0 right-0 -z-20'>

@@ -1,35 +1,30 @@
 
-import { useGSAP } from "@gsap/react"
-import gsap from "gsap"
 import {  useRef } from "react"
+import Fiverr from "./SVG/Fiverr"
+import Google from "./SVG/Google"
+import Upwork from "./SVG/Upwork"
 export default function Footer() {
   const ref=useRef(null)
-  useGSAP(
-    () => {
-      gsap.from(ref.current, { opacity: 0, duration: 3, ease: "bounce.in" })
-      gsap.to(ref.current, { opacity: 1, duration:3, ease: "bounce.out" })
-    },
-    { scope: ref }
-  )
+   const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   return (
-    <footer className="z-50 grid  w-[90vw] grid-cols-3 p-2 mb-0 mt-2 place-content-center mx-auto" ref={ref}>
-      <div className="mx-auto">
-      <button className='sm:w-[220px] w-[100px] p-3   rounded-lg sm:text-lg text-base mx-2  text-center' >
-        About
-      </button>
-      <div className={`sm:w-[220px] w-[100px] h-[2px] bg-white mx-auto origin-left duration-500 transition-all `} ></div>
-      </div>
-   
-      <div className="mx-auto"><button  className='sm:w-[220px] w-[100px] p-3   rounded-lg sm:text-lg text-base mx-2 text-center' >
-        Skills
-      </button>
-      <div className={`sm:w-[220px] w-[100px] h-[2px] bg-white mx-auto  origin-left duration-500 transition-all`} ></div></div> 
-      <div className="mx-auto">
-      <button className='sm:w-[220px] w-[100px] p-3   rounded-lg sm:text-lg text-base mx-2 text-center' >
-        Projects
-      </button>
-      <div className={`sm:w-[220px] w-[100px] h-[2px] bg-white mx-auto origin-left duration-500 transition-all`} ></div>
-      </div>
-   </footer>
+    <footer
+      className="   h-[200px] border-t-2 dark:border-white shadow-[0_0_10px_2px_rgba(0,0,0)] dark:shadow-[0_0_10px_2px_rgba(255,255,255)] p-2 flex flex-col items-center justify-center text-center space-y-4t"
+      ref={ref}
+      style={{
+         background: isDarkMode ? "linear-gradient(90deg, #000000, #12001a, #000000)" : "linear-gradient(90deg, #ada5a5, #e3b7f6,#ada5a5)",
+      }}
+    >
+      <h1 className="text-3xl md:text-5xl font-bold  mb-4 font-serif ">
+        Contact Me
+      </h1>
+      <div className="flex  items-center justify-center">
+         <a href="mailto:shaeelhashmi332@gmail.com" className="mx-5">
+          <Google/></a> 
+         <a href="https://www.fiverr.com/shaeelhashmi" className="mx-5">
+          <Fiverr/></a>
+            <a href="https://www.upwork.com/freelancers/~011e1744278fd5fcd2" className="mx-5">
+          <Upwork/></a>
+          </div>
+    </footer>
   )
 }

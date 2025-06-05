@@ -19,7 +19,7 @@ export default function Project() {
     }
   }
   return (
-    <div className="flex items-center justify-center w-full md:my-12" >
+    <div className="flex items-center justify-center w-full md:my-12 font-franklin" >
         <div><button onClick={() => Move(-1)} className="mx-3 ">
         <Next rotate={true}></Next></button></div>
        <div className="flex items-center justify-start my-10 overflow-x-auto noScroll xs:w-[260px] md:w-[720px] w-[240px]" ref={ref}> 
