@@ -6,6 +6,8 @@ export default function Experience() {
       <div>
         <h1 className="sm:text-2xl text-lg font-bold ">
         Intern Ninja codes
+        <br></br>
+       <span className="font-light italic text-xs">(March - April 2025)</span>
         </h1>
         <p>Interned at Ninja Codes and performed tasks such as automation and data processing</p>
       </div>

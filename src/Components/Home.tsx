@@ -13,8 +13,8 @@ export default function Main() {
 
 
   return (
-    <main className=" max-h-screen  z-20 text-black dark:text-white">
-      <div ref={ref} className="mx-auto   z-10 h-screen  overflow-hidden flex flex-col items-center justify-center ">
+    <main className="  z-20 text-black dark:text-white overflow-hidden ">
+      <div ref={ref} className="mx-auto   z-10 min-h-[800px] h-screen  overflow-hidden flex flex-col items-center justify-center ">
        <header className="z-10 mt-14 text-center">
     <div>
     <ReactTyped strings={["Hi I'm Muhammad Shaeel Arshad Hashmi"]}  className="text-3xl md:text-5xl font-bold  my-5" typeSpeed={40} />
@@ -35,16 +35,16 @@ export default function Main() {
 </header>
        
       </div>
-       <div ref={skillRef} className="mx-auto  z-10 h-screen  overflow-hidden flex flex-col items-center justify-center ">
+       <div ref={skillRef} className="mx-auto  z-10 min-h-[600px] h-[80%]  overflow-hidden flex flex-col items-center justify-center ">
         <h1 className="text-3xl md:text-5xl font-bold  my-5">Skills</h1>
         <Skills />
       </div>
-      <div ref={projectRef} className="mx-auto  z-10 h-screen  overflow-hidden flex flex-col items-center justify-center ">
+      <div ref={projectRef} className="mx-auto  z-10 min-h-[600px] h-[80%]  overflow-hidden flex flex-col items-center justify-center ">
         <h1 className="text-3xl md:text-5xl font-bold  my-5">Projects</h1>
         
         <Project />
       </div>
-      <div ref={projectRef} className="mx-auto  z-10 h-screen  overflow-hidden flex flex-col items-center justify-center ">
+      <div ref={projectRef} className="mx-auto  z-10 min-h-[800px] h-screen overflow-hidden flex flex-col items-center justify-center ">
         <h1 className="text-3xl md:text-5xl font-bold  my-5">Experience</h1>
         
         <Experience />
