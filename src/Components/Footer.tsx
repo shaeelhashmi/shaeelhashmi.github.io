@@ -8,7 +8,7 @@ export default function Footer() {
    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   return (
     <footer
-      className="   h-[200px] border-t-2 dark:border-white shadow-[0_0_10px_2px_rgba(0,0,0)] dark:shadow-[0_0_10px_2px_rgba(255,255,255)] p-2 flex flex-col items-center justify-center text-center space-y-4t"
+      className=" border-black  h-[200px] border-t-2 dark:border-white shadow-[0_0_10px_2px_rgba(0,0,0)] dark:shadow-[0_0_10px_2px_rgba(255,255,255)] p-2 flex flex-col items-center justify-center text-center space-y-4t"
       ref={ref}
       style={{
          background: isDarkMode ? "linear-gradient(90deg, #000000, #12001a, #000000)" : "linear-gradient(90deg, #ada5a5, #e3b7f6,#ada5a5)",
