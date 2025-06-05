@@ -18,11 +18,11 @@ export default function Footer() {
         Contact Me
       </h1>
       <div className="flex  items-center justify-center">
-         <a href="mailto:shaeelhashmi332@gmail.com" className="mx-5">
+         <a href="mailto:shaeelhashmi332@gmail.com" className="mx-5" target="_blank">
           <Google/></a> 
-         <a href="https://www.fiverr.com/shaeelhashmi" className="mx-5">
+         <a href="https://www.fiverr.com/shaeelhashmi" className="mx-5" target="_blank">
           <Fiverr/></a>
-            <a href="https://www.upwork.com/freelancers/~011e1744278fd5fcd2" className="mx-5">
+            <a href="https://www.upwork.com/freelancers/~011e1744278fd5fcd2" className="mx-5" target="_blank">
           <Upwork/></a>
           </div>
     </footer>
