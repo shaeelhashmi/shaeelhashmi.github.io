@@ -26,16 +26,6 @@ export default function Pipe(props: any) {
   const { camera, scene } = useThree();
   scene.fog = new THREE.Fog(isDarkMode?0x12001a:0xe3b7f6, 3, 4);
   useFrame(() => {
-    const t = 0; // Start of the curve
-    if (ref.current) {
-      const tubeGeometry = ref.current.geometry as THREE.TubeGeometry;
-      const pos = tubeGeometry.parameters.path.getPointAt(t);
-      const lookAtPos = tubeGeometry.parameters.path.getPointAt((t + 0.05) % 1); // Look slightly ahead
-      camera.position.copy(pos);
-      camera.lookAt(lookAtPos);
-    }
-  });
-  useFrame(() => {
     const time = Date.now()/2;
     const looptime =20000;
     const t = (time % looptime) / looptime;
@@ -85,7 +75,6 @@ export default function Pipe(props: any) {
               <MyLine start={[0.5, 0, 0]} end={[0.5, 0, 0.5]} color={colour} />
               <MyLine start={[0.5, 0.5, 0]} end={[0.5, 0.5, 0.5]} color={colour} />
               <MyLine start={[0, 0.5, 0]} end={[0, 0.5, 0.5]} color={colour} />
-    
             </mesh>
           );
         })}

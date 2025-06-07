@@ -13,10 +13,7 @@ export default function Line(props: any) {
     return (
       <line ref={ref}>
         <bufferGeometry />
-  <lineBasicMaterial color={color} toneMapped={true} />
-
-
-        
+  <lineBasicMaterial color={color} toneMapped={true} />    
       </line>
     );
 }

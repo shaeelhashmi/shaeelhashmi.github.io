@@ -104,7 +104,6 @@ const ParticleDesign = () => {
       />
     );
   }
-
   return <></>;
 };
 export default ParticleDesign
