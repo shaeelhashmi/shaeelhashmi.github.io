@@ -11,7 +11,7 @@ export default function Footer() {
       className=" border-black  h-[200px] border-t-2 dark:border-white shadow-[0_0_10px_2px_rgba(0,0,0)] dark:shadow-[0_0_10px_2px_rgba(255,255,255)] p-2 flex flex-col items-center justify-center text-center space-y-4t"
       ref={ref}
       style={{
-         background: isDarkMode ? "linear-gradient(90deg, #000000, #12001a, #000000)" : "linear-gradient(90deg, #ada5a5, #e3b7f6,#ada5a5)",
+         background: isDarkMode ? "linear-gradient(90deg, #000000, #12001a, #000000)" : "linear-gradient(90deg,rgb(255 234 234), rgb(240 209 253), rgb(255 234 234))",
       }}
     >
       <h1 className="text-3xl md:text-5xl font-bold  mb-4 font-heading ">
