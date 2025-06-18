@@ -24,7 +24,7 @@ export default function Pipe(props: any) {
   ], true);
 
   const { camera, scene } = useThree();
-  scene.fog = new THREE.Fog(isDarkMode?0x12001a:0xe3b7f6, 3, 4);
+  scene.fog = new THREE.Fog(isDarkMode?0x12001a:0xf7e8fd, 3, 4);
   useFrame(() => {
     const time = Date.now()/2;
     const looptime =20000;
