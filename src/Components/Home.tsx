@@ -51,7 +51,7 @@ export default function Main() {
       loop
     />
     <p className="max-w-[600px] px-4 xs:text-md text-sm sm:text-lg font-calibri text-left">
-      Hi, I’m a passionate full-stack developer who loves turning complex problems into elegant web solutions. Whether it’s building real-time apps with WebSockets and Go or crafting interactive UIs with React, I aim to create clean, high-performance experiences. I'm also an active open-source contributor and a CS student at Bahria University.
+      Hi, I’m a passionate full-stack developer who loves turning complex problems into elegant web solutions. Whether it’s building real-time apps with WebSockets and Go,crafting interactive UIs with React, making fullstack apps using Node.js and Express or working with databases like MongoDB and SQL, I aim to create clean, high-performance experiences. I'm also an active open-source contributor and a CS student at Bahria University.
     </p>
     <div className="z-20 flex justify-center mt-4 ">
           <a href="https://github.com/shaeelhashmi" className="mx-2" target="_blank">
