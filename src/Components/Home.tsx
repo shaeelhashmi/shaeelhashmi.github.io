@@ -4,28 +4,55 @@ import Skills from "./Skills";
 import Project from "./Project";
 import { ReactTyped } from "react-typed";
 import Experience from "./Experience";
+import { useRef ,useEffect} from "react";
 export default function Main() {
+  const skillRef=useRef<HTMLDivElement>(null);
+  const projectRef=useRef<HTMLDivElement>(null);
+  const ExperienceRef=useRef<HTMLDivElement>(null);
+  useEffect(() => {
+       const handleScroll = () => {
+    const refs = [skillRef, projectRef, ExperienceRef];
+    refs.forEach(ref => {
+      if (ref.current) {
+        const el = ref.current;
+        const rect = el.getBoundingClientRect();
+        const inView = rect.top+400 < window.innerHeight && rect.bottom > 400;
 
+        if (inView && el.classList.contains("opacity-0")) {
+          const translateClass = el.getAttribute("data-translate") || "";
+          el.classList.remove("opacity-0", translateClass);
+        }
+      }
+    });
+  };
 
+  window.addEventListener("scroll", handleScroll);
+  handleScroll(); // check once on mount too
+
+  return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <main className="  z-20 text-black dark:text-white overflow-hidden ">
       <div className="mx-auto   z-10 min-h-[800px] h-screen  overflow-hidden flex flex-col items-center justify-center ">
-       <header className="z-10 mt-14 text-center ">
+       <header className="z-10 mt-14 text-center  animate-fade-in transition-all duration-1000">
     <div>
-    <ReactTyped strings={["Hi I'm Muhammad Shaeel Arshad Hashmi"]}  className="text-3xl md:text-5xl font-bold  my-5 font-heading" typeSpeed={40} />
-    <br />
+    <p className="text-3xl md:text-5xl font-bold   font-heading">Shaeel Hashmi</p>
 
     <ReactTyped
-    className="text-sm sm:text-base dark:text-gray-300 text-gray-700 font-medium mt-2 my-5 w-3/4 mx-auto font-times"
+    className="text-sm sm:text-base dark:text-gray-300 text-gray-700 font-medium  mb-5 w-3/4 mx-auto font-times "
       strings={[
         "Full-stack web developer",
-        " MERN stack specialist",
+        "Software engineer",
         "CS student at Bahria University",
+        "Open-source enthusiast",
       ]}
       typeSpeed={40}
       backSpeed={50}
       loop
     />
+    <p className="max-w-[600px] px-4 xs:text-md text-sm sm:text-lg font-calibri text-left">
+      Hi, I’m a passionate full-stack developer who loves turning complex problems into elegant web solutions. Whether it’s building real-time apps with WebSockets and Go or crafting interactive UIs with React, I aim to create clean, high-performance experiences. I'm also an active open-source contributor and a CS student at Bahria University.
+    </p>
     <div className="z-20 flex justify-center mt-4 ">
           <a href="https://github.com/shaeelhashmi" className="mx-2" target="_blank">
             <Github />
@@ -38,18 +65,16 @@ export default function Main() {
 </header>
        
       </div>
-       <div className="mx-auto  z-10 min-h-[600px] h-[80%]  overflow-hidden flex flex-col items-center justify-center ">
+       <div className="mx-auto  z-10 min-h-[600px] h-[80%]  overflow-hidden flex flex-col items-center justify-center opacity-0 duration-1000 transition-all -translate-x-64" ref={skillRef} data-translate="-translate-x-64" >
         <h1 className="text-3xl md:text-5xl font-bold  my-5 font-heading">Skills</h1>
         <Skills />
       </div>
-      <div  className="mx-auto  z-10 min-h-[600px] h-[80%]  overflow-hidden flex flex-col items-center justify-center ">
+      <div  className="mx-auto  z-10 min-h-[600px] h-[80%]  overflow-hidden flex flex-col items-center justify-center opacity-0 duration-1000 transition-all translate-x-64" ref={projectRef} data-translate="translate-x-64" >
         <h1 className="text-3xl md:text-5xl font-bold  my-5 font-heading">Projects</h1>
-        
-        <Project />
+      <Project />
       </div>
-      <div  className="mx-auto  z-10 min-h-[600px] h-[80%]  overflow-hidden flex flex-col items-center justify-center ">
-        <h1 className="text-3xl md:text-5xl font-bold  my-5 font-heading">Experience</h1>
-        
+      <div  className="mx-auto  z-10 min-h-[600px] h-[80%]  overflow-hidden flex flex-col items-center justify-center opacity-0 duration-1000 transition-all -translate-x-64" ref={ExperienceRef} data-translate="-translate-x-64" >
+        <h1 className="text-3xl md:text-5xl font-bold  my-5 font-heading">Experience</h1>    
         <Experience />
       </div>
     </main>

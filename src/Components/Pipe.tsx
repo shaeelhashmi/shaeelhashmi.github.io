@@ -3,6 +3,7 @@ import { useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 import { Mesh } from 'three';
 import MyLine from './Line';
+import { useEffect } from "react";
 export default function Pipe(props: any) {
     const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   const ref = useRef<Mesh>(null);
@@ -25,6 +26,8 @@ export default function Pipe(props: any) {
 
   const { camera, scene } = useThree();
   scene.fog = new THREE.Fog(isDarkMode?0x12001a:0xf7e8fd, 3, 4);
+  // Dispose of geometry and material on unmount to prevent memory leaks
+
   useFrame(() => {
     const time = Date.now()/2;
     const looptime =20000;
@@ -46,6 +49,29 @@ export default function Pipe(props: any) {
       }
     });
   });
+
+  useEffect(() => {
+    return () => {
+      if (ref.current) {
+        ref.current.geometry.dispose();
+        if (Array.isArray(ref.current.material)) {
+          ref.current.material.forEach((mat) => mat.dispose());
+        } else {
+          ref.current.material.dispose();
+        }
+      }
+      boxRefs.current.forEach((boxRef) => {
+        if (boxRef) {
+          boxRef.geometry.dispose();
+          if (Array.isArray(boxRef.material)) {
+            boxRef.material.forEach((mat) => mat.dispose());
+          } else {
+            boxRef.material.dispose();
+          }
+        }
+      });
+    };
+  }, []);
 
   return (
     <>
