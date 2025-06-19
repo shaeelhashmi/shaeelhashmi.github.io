@@ -4,37 +4,18 @@ import Skills from "./Skills";
 import Project from "./Project";
 import { ReactTyped } from "react-typed";
 import Experience from "./Experience";
-import { useRef ,useEffect} from "react";
-export default function Main() {
-  const skillRef=useRef<HTMLDivElement>(null);
-  const projectRef=useRef<HTMLDivElement>(null);
-  const ExperienceRef=useRef<HTMLDivElement>(null);
-  useEffect(() => {
-       const handleScroll = () => {
-    const refs = [skillRef, projectRef, ExperienceRef];
-    refs.forEach(ref => {
-      if (ref.current) {
-        const el = ref.current;
-        const rect = el.getBoundingClientRect();
-        const inView = rect.top+400 < window.innerHeight && rect.bottom > 400;
+interface MainProps {
+  skillRef?: React.RefObject<HTMLDivElement>;
+  projectRef?: React.RefObject<HTMLDivElement>;
+  ExperienceRef?: React.RefObject<HTMLDivElement>;
+}
+export default function Main(props: MainProps) {
+  const { skillRef, projectRef, ExperienceRef } = props;
 
-        if (inView && el.classList.contains("opacity-0")) {
-          const translateClass = el.getAttribute("data-translate") || "";
-          el.classList.remove("opacity-0", translateClass);
-        }
-      }
-    });
-  };
-
-  window.addEventListener("scroll", handleScroll);
-  handleScroll(); // check once on mount too
-
-  return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
   return (
     <main className="  z-20 text-black dark:text-white overflow-hidden ">
       <div className="mx-auto   z-10 min-h-[800px] h-screen  overflow-hidden flex flex-col items-center justify-center ">
-       <header className="z-10 mt-14 text-center  animate-fade-in transition-all duration-1000">
+       <header className="z-10 mt-14 text-center  animate-fade-in transition-all duration-1000 overflow-hidden">
     <div>
     <p className="text-3xl md:text-5xl font-bold   font-heading">Shaeel Hashmi</p>
 

@@ -1,15 +1,19 @@
 
-import {  useRef } from "react"
 import Fiverr from "./SVG/Fiverr"
 import Google from "./SVG/Google"
 import Upwork from "./SVG/Upwork"
-export default function Footer() {
-  const ref=useRef(null)
+interface FooterProps {
+  footerRef: React.RefObject<HTMLDivElement>;
+}
+export default function Footer(props: FooterProps) {
+    const {footerRef} = props;
    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   return (
-    <footer
-      className=" border-black  h-[200px] border-t-2 dark:border-white shadow-[0_0_10px_2px_rgba(0,0,0)] dark:shadow-[0_0_10px_2px_rgba(255,255,255)] p-2 flex flex-col items-center justify-center text-center space-y-4t"
-      ref={ref}
+    <footer className="h-[200px]  overflow-y-hidden flex flex-col items-center justify-center text-center transition-all duration-1000">
+    <div
+      className=" h-full w-full  translate-y-32 transition-all duration-1000 opacity-0  p-2 space-y-4 "
+      data-translate="translate-y-32"
+      ref={footerRef}
       style={{
          background: isDarkMode ? "linear-gradient(90deg, #000000, #12001a, #000000)" : "linear-gradient(90deg,rgb(255 234 234), rgb(240 209 253), rgb(255 234 234))",
       }}
@@ -25,6 +29,7 @@ export default function Footer() {
             <a href="https://www.upwork.com/freelancers/~011e1744278fd5fcd2" className="mx-5" target="_blank">
           <Upwork/></a>
           </div>
+    </div>
     </footer>
   )
 }
