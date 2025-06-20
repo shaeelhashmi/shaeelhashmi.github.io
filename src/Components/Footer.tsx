@@ -1,5 +1,4 @@
 
-import Fiverr from "./SVG/Fiverr"
 import Google from "./SVG/Google"
 import Upwork from "./SVG/Upwork"
 interface FooterProps {
@@ -11,7 +10,7 @@ export default function Footer(props: FooterProps) {
   return (
     <footer className="h-[200px]  overflow-y-hidden flex flex-col items-center justify-center text-center transition-all duration-1000">
     <div
-      className=" h-full w-full  translate-y-32 transition-all duration-1000 opacity-0  p-2 space-y-4 "
+      className=" h-full w-full  translate-y-32 transition-all duration-1000 opacity-0  p-2 space-y-4 pt-6 "
       data-translate="translate-y-32"
       ref={footerRef}
       style={{
@@ -24,8 +23,6 @@ export default function Footer(props: FooterProps) {
       <div className="flex  items-center justify-center">
          <a href="mailto:shaeelhashmi332@gmail.com" className="mx-5" target="_blank">
           <Google/></a> 
-         <a href="https://www.fiverr.com/shaeelhashmi" className="mx-5" target="_blank">
-          <Fiverr/></a>
             <a href="https://www.upwork.com/freelancers/~011e1744278fd5fcd2" className="mx-5" target="_blank">
           <Upwork/></a>
           </div>

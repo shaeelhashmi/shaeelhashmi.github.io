@@ -18,7 +18,7 @@ hover:before:translate-x-[340%]`}>
         <h1 className="font-bold text-center text-xl h-[50px] mb-2 font-franklin">{props.Title}</h1>
       </div>
       <div className="h-full p-2 font-calibri">
-        <p className={`xs:text-sm text-sm sm:text-sm ${isDarkMode ? 'text-white/90' : 'text-black/90'} drop-shadow-sm`}>{props.description}</p>
+        <p className={`xs:text-sm text-sm sm:text-sm ${isDarkMode ? 'text-white' : 'text-black'} drop-shadow-sm`}>{props.description}</p>
       </div>
       <div className="w-full font-calibri">
         <a

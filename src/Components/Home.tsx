@@ -10,6 +10,7 @@ interface MainProps {
   ExperienceRef?: React.RefObject<HTMLDivElement>;
 }
 export default function Main(props: MainProps) {
+  const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   const { skillRef, projectRef, ExperienceRef } = props;
 
   return (
@@ -18,7 +19,14 @@ export default function Main(props: MainProps) {
        <header className="z-10 mt-14 text-center  animate-fade-in transition-all duration-1000 overflow-hidden">
     <div>
     <p className="text-3xl md:text-5xl font-bold   font-heading">Shaeel Hashmi</p>
-
+   <div className="z-20 flex justify-center mt-4 ">
+          <a href="https://github.com/shaeelhashmi" className="mx-2" target="_blank">
+            <Github />
+          </a>
+          <a href="https://www.linkedin.com/in/muhammad-shaeel-arshad-hashmi/" className="mx-2" target="_blank" >
+            <LinkedIn />
+          </a>
+        </div> 
     <ReactTyped
     className="text-sm sm:text-base dark:text-gray-300 text-gray-700 font-medium  mb-5 w-3/4 mx-auto font-times "
       strings={[
@@ -31,17 +39,13 @@ export default function Main(props: MainProps) {
       backSpeed={50}
       loop
     />
-    <p className="max-w-[600px] px-4 xs:text-md text-sm sm:text-lg font-calibri text-left">
+    
+    <p className="max-w-[600px] px-4 xs:text-md text-sm sm:text-lg font-calibri text-left"
+     style={{ textShadow: isDarkMode?'0 0 1px white':  '0 0 1px black'}}
+      >
       Hi, I’m a passionate full-stack developer who loves turning complex problems into elegant web solutions. Whether it’s building real-time apps with WebSockets and Go,crafting interactive UIs with React, making fullstack apps using Node.js and Express or working with databases like MongoDB and SQL, I aim to create clean, high-performance experiences. I'm also an active open-source contributor and a CS student at Bahria University.
     </p>
-    <div className="z-20 flex justify-center mt-4 ">
-          <a href="https://github.com/shaeelhashmi" className="mx-2" target="_blank">
-            <Github />
-          </a>
-          <a href="https://www.linkedin.com/in/muhammad-shaeel-arshad-hashmi/" className="mx-2" target="_blank" >
-            <LinkedIn />
-          </a>
-        </div> 
+ 
   </div>
 </header>
        
