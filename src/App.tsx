@@ -9,19 +9,21 @@ const Canvas1 = lazy(() => import('./Components/Canvas1'))
 
 export default function App() {
     const skillRef=useRef<HTMLDivElement>(null);
+    const frontendSkillRef=useRef<HTMLDivElement>(null);
+    const backendSkillRef=useRef<HTMLDivElement>(null);
+    const databaseSkillRef=useRef<HTMLDivElement>(null);
+    const otherSkillRef=useRef<HTMLDivElement>(null);
     const projectRef=useRef<HTMLDivElement>(null);
     const ExperienceRef=useRef<HTMLDivElement>(null);
     const footerRef = useRef<HTMLDivElement>(null);
         const handleScroll = () => {
-        const refs = [skillRef, projectRef, ExperienceRef];
+        const refs = [skillRef, projectRef, ExperienceRef,frontendSkillRef, backendSkillRef, databaseSkillRef, otherSkillRef];
         refs.forEach(ref => {
           if (ref?.current) {
             const el = ref.current;
             const rect = el.getBoundingClientRect();
-            const inView = rect.top+400 < window.innerHeight && rect.bottom > 400;
-    
+            const inView = rect.top+200 < window.innerHeight && rect.bottom > 400;
             if (inView && el.classList.contains("opacity-0")) {
-              console.log("Element in view:", el);
               const translateClass = el.getAttribute("data-translate") || "";
               el.classList.remove("opacity-0", translateClass);
             }
@@ -29,7 +31,7 @@ export default function App() {
         });
         if (footerRef.current) {
           const footerRect = footerRef.current.getBoundingClientRect();
-          const footerInView = footerRect.top < window.innerHeight && footerRect.bottom > 0;
+          const footerInView = footerRect.top < window.innerHeight + 300 && footerRect.bottom > 0;
           if (footerInView && footerRef.current.classList.contains("opacity-0")) {
             if (footerRef.current.parentElement) {
                   setTimeout(() => {
@@ -58,7 +60,7 @@ export default function App() {
       </div>
 
       <div className="w-full dark:text-white text-black">
-        <Home skillRef={skillRef} projectRef={projectRef} ExperienceRef={ExperienceRef} />
+        <Home skillRef={skillRef} projectRef={projectRef} ExperienceRef={ExperienceRef} frontendSkillRef={frontendSkillRef} backendSkillRef={backendSkillRef} databaseSkillRef={databaseSkillRef} otherSkillRef={otherSkillRef}/>
         <Footer footerRef={footerRef}/>
       </div>
   

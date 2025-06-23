@@ -18,7 +18,7 @@ export default function Footer(props: FooterProps) {
       }}
     >
       <h1 className="text-3xl md:text-5xl font-bold  mb-4 font-heading ">
-        Contact Me
+        Contact
       </h1>
       <div className="flex  items-center justify-center">
          <a href="mailto:shaeelhashmi332@gmail.com" className="mx-5" target="_blank">
@@ -26,7 +26,11 @@ export default function Footer(props: FooterProps) {
             <a href="https://www.upwork.com/freelancers/~011e1744278fd5fcd2" className="mx-5" target="_blank">
           <Upwork/></a>
           </div>
+          <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+      ©  Powered by Shaeel Hashmi
     </div>
+    </div>
+    
     </footer>
   )
 }
