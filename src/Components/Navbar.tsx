@@ -44,7 +44,7 @@ const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>,name:string) => 
   }
 
   return (
-    <nav className={` fixed top-0 w-full z-50 flex flex-col md:flex-row  justify-between p-2  ${darkMode ?"bg-[rgb(5,5,18)] text-white":"bg-[#fffbff] text-black"} transition-all duration-300`}>
+    <nav className={` fixed top-0 w-full z-50 grid md:grid-cols-[20%,1fr,20%] grid-cols-1  justify-between p-2  ${darkMode ?"bg-[rgb(5,5,18)] text-white":"bg-[#fffbff] text-black"} transition-all duration-300`}>
       <div className="flex items-center justify-start p-3">
         <button
           className="md:hidden block text-2xl p-2 rounded-full"

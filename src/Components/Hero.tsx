@@ -5,7 +5,7 @@ import Github from "./SVG/Github";
 import LinkedIn from "./SVG/Linkedin";
 export default function Hero() {
   return (
-    <header className="min-h-screen mb-20 mt-16" >
+    <header className="min-h-fit mb-12 mt-16" >
     <div className="relative w-screen overflow-hidden flex flex-col items-center justify-center   min-h-[350px]" >
     <div className="flex items-center justify-center w-full flex-col min-h-[300px]">
         <p className="text-5xl md:text-6xl font-bold   font-heading text-center z-20">Shaeel Hashmi</p>
