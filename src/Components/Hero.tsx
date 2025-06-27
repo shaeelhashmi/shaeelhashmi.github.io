@@ -10,7 +10,7 @@ export default function Hero() {
     <div className="flex items-center justify-center w-full flex-col min-h-[300px]">
         <p className="text-5xl md:text-6xl font-bold   font-heading text-center z-20">Shaeel Hashmi</p>
          <ReactTyped
-    className="text-2xl sm:text-3xl  font-medium  mb-5 w-3/4 mx-auto font-times  z-20 text-center"
+    className="text-2xl sm:text-3xl  font-medium  mb-5 w-3/4 mx-auto font-times  z-20 text-center h-10"
       strings={[
         "Full-stack web developer",
         "Software engineer",
@@ -35,8 +35,8 @@ export default function Hero() {
       
     </div>
     <div className="w-full flex items-center justify-center flex-col max-w-[700px] p-3 mx-auto text-center">
-        <h1 className="md:text-3xl text-2xl my-5 font-bold font-heading">About</h1>
-        <p>Hi, I’m a passionate full-stack developer who loves turning complex problems into elegant web solutions. Whether it’s building real-time apps with WebSockets and Go,crafting interactive UIs with React, making fullstack apps using Node.js and Express or working with databases like MongoDB and SQL, I aim to create clean, high-performance experiences. I'm also an active open-source contributor and a CS student at Bahria University.</p>
+        <h1 className="md:text-5xl text-4xl my-5 font-bold font-heading">About</h1>
+        <p className="sm:text-lg text-md">Hi, I’m a passionate full-stack developer who loves turning complex problems into elegant web solutions. Whether it’s building real-time apps with WebSockets and Go,crafting interactive UIs with React, making fullstack apps using Node.js and Express or working with databases like MongoDB and SQL, I aim to create clean, high-performance experiences. I'm also an active open-source contributor and a CS student at Bahria University.</p>
     </div>
     </header>
   )

@@ -15,7 +15,7 @@ before:bg-[#ffffff3f] before:skew-x-[45deg] before:scale-150 before:-translate-x
 before:transition-transform before:duration-300 before:pointer-events-none before:-z-10
 hover:before:translate-x-[340%]`}>
       <div>
-        <h1 className="font-bold text-center text-xl h-[50px] mb-2 font-franklin">{props.Title}</h1>
+        <h1 className="font-bold text-center text-xl h-[50px] mb-2 font-franklin px-2">{props.Title}</h1>
       </div>
       <div className="h-full p-2 font-calibri">
         <p className={`xs:text-sm text-sm sm:text-sm  drop-shadow-sm`}>{props.description}</p>

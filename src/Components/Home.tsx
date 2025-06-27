@@ -36,7 +36,7 @@ export default function Main(props: MainProps) {
     <main className="  z-20 overflow-hidden ">
        <section className="mx-auto  z-10 min-h-screen   overflow-hidden flex flex-col items-center justify-center opacity-0 duration-1000 transition-all -translate-x-64" ref={skillRef} data-translate="-translate-x-64" id="skills">
         <h1 className="text-4xl md:text-5xl font-bold  my-5 font-heading">Skills</h1>
-        <div className="flex flex-col justify-center items-center sm:w-[400px] w-[350px] mb-10">
+        <div className="flex flex-col justify-center items-center sm:w-[90%] w-[350px] mb-10">
       <div className="flex flex-col items-center justify-center w-full space-y-4 sm:mt-20 mt-10 gap-7">
         <Skills skills={[<HTML></HTML>,<CSS/>,<JS></JS>,<Ts></Ts>,<ReactSVG/>,<Tailwind></Tailwind>,<Bootstrap/>,<Three/>,<GsapSvg/>]} title="Frontend" SkillRef={frontendSkillRef} className="translate-x-64" />
         <Skills skills={[<GoSvg></GoSvg>,<NodeJs/>,<ExpressJs/>,<C/>,<Python/>]} title="Backend" SkillRef={backendSkillRef} className="-translate-x-64"/>
