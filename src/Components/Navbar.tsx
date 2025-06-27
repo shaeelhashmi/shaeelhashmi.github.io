@@ -25,11 +25,12 @@ useEffect(() => {
 },[]);
 const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>,name:string) => {
     e.preventDefault(); 
+    setOpen(false);
     if (name === "#") {
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
-    setOpen(false);
+    
     const target = document.getElementById(name);
     if (target) {
       window.removeEventListener("scroll", handleScroll);
