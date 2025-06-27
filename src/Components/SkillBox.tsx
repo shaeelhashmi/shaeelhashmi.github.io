@@ -1,10 +1,11 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 interface props {
     svg: React.ReactElement;
 
 }
 export default function SkillBox(props: props) {
-     const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+     const isDarkMode = useSelector((state: any) => state.DarkMode.value);
   return (
       <div className={`
         relative overflow-hidden  cursor-pointer p-4 z-10 transition-all duration-700

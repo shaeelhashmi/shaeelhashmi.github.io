@@ -1,6 +1,7 @@
 
+import { useSelector } from "react-redux";
 export default function Linkedin() {
-  const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const isDarkMode = useSelector((state: any) => state.DarkMode.value);
   return (
     <>
       <svg className="sm:w-[48px] sm:h-[48px] w-[30px] h-[30px] mx-auto mr-3" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">

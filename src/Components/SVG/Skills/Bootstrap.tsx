@@ -1,6 +1,7 @@
 
+import {useSelector} from "react-redux";
 export default function Bootstrap() {
-  const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const isDarkMode = useSelector((state: any) => state.DarkMode.value);
   return (
     <svg className="sm:w-[70px] sm:h-[70px] w-[50px] h-[50px]"   viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="bootstrap5">

@@ -4,8 +4,9 @@ import * as THREE from 'three';
 import { Mesh } from 'three';
 import MyLine from './Line';
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
 export default function Pipe(props: any) {
-    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const isDarkMode = useSelector((state: any) => state.DarkMode.value);
   const ref = useRef<Mesh>(null);
   const boxRefs = useRef<Array<Mesh>>([]);
   const colours=isDarkMode?["#FF0000","#00FF00","#0000FF","#FFFF00","#FF00FF","#00FFFF"]:["#D60E00","#940043","#007D28","#492B00","#005757","#3D000F"] ;

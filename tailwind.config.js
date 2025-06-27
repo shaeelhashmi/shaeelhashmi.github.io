@@ -7,6 +7,9 @@ export default {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        invinsible: '0 0 0 0 transparent',
+      },
       screens: {
         'xs':  {'min': '400px', 'max': '639px' }, // Custom screen size for 400px
         'xsh': { 'raw': '(min-height: 520px)' },

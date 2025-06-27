@@ -6,8 +6,7 @@ import {
   MoveDirection,
   OutMode,
 } from "@tsparticles/engine";
-// import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
-// import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
+import { useSelector } from "react-redux";
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
@@ -28,7 +27,7 @@ const ParticleDesign = () => {
     console.log(container);
   };
 
-  const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const isDarkMode = useSelector((state: any) => state.DarkMode.value);
 
   const options: ISourceOptions = useMemo(
     () => ({
@@ -36,6 +35,10 @@ const ParticleDesign = () => {
         color: {
           value: "transparent",
         },
+      },
+      fullScreen: {
+        enable: false,
+        zIndex: -1,
       },
       fpsLimit: 30,
       interactivity: {
@@ -100,7 +103,7 @@ const ParticleDesign = () => {
         id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={options}
-        className="-z-30"
+        className="-z-30 absolute"
       />
     );
   }

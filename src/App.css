@@ -13,6 +13,8 @@
   .animate-fade-in {
     animation: fadeIn 0.5s ease-in-out;
   }
+  
+  
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -27,40 +29,14 @@
   .noScroll::-webkit-scrollbar {
     display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
   }
+
+  html {
+  scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
   body{
     overflow-x: hidden;
-     background: linear-gradient(90deg, #000000, #12001a,#000000);
-    background: -webkit-linear-gradient(90deg, #000000, #12001a,#000000); /* Safari */
-    background: -moz-linear-gradient(90deg, #000000, #12001a,#000000); /* Firefox */
-    background: -o-linear-gradient(90deg, #000000, #12001a,#000000); /* Opera */
-    background-color: black;
   }
-  @media (prefers-color-scheme: dark) {
-     body{
-    background: linear-gradient(90deg, #000000, #12001a,#000000);
-    background: -webkit-linear-gradient(90deg, #000000, #12001a,#000000); /* Safari */
-    background: -moz-linear-gradient(90deg, #000000, #12001a,#000000); /* Firefox */
-    background: -o-linear-gradient(90deg, #000000, #12001a,#000000); /* Opera */
-    background-color: black;
-  }
-  .loader-square{
-        background: white;
-  }
-  }
-
-  @media (prefers-color-scheme: light) {
-     body{
-    background: linear-gradient(90deg, #f5f5f5, #f7e8fd, #f5f5f5);
-    background: -webkit-linear-gradient(90deg, #ada5a5, #e3b7f6,#ada5a5); /* Safari */
-    background: -moz-linear-gradient(90deg, #ada5a5, #e3b7f6,#ada5a5); /* Firefox */
-    background: -o-linear-gradient(90deg, #ada5a5, #e3b7f6,#ada5a5); /* Opera */
-    background-color: rgb(255, 255, 255);
-  }
-   .loader-square{
-        background:black;
-  }
-  }
-
 
   @keyframes square-animation {
     0% {
