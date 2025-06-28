@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { Moon } from "lucide-react";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
+import Logo from "./SVG/Logo";
 interface NavBarProps {
   handleScroll: () => void;
 }
@@ -53,7 +54,7 @@ const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>,name:string) => 
         >
           <AlignJustify />
         </button>
-        <h1 className="text-2xl font-bold font-heading ml-3">Portfolio</h1>
+        <h1 className="text-2xl font-bold font-heading ml-3"><Logo/></h1>
         
       </div>
       <div
