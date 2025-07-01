@@ -13,7 +13,8 @@ export default function ProjectBox(props:props) {
     <div className={`relative  w-[300px] h-[480px] 
 flex flex-col justify-between ${isDarkMode ? 'bg-purple-900/10' : 'bg-fuchsia-400/20'}  rounded-lg`}>
       <div className="h-1/2 w-full ">
-      <img src={props.image} className="h-full w-full rounded-t-lg object-cover aspect-[3/2]"></img>
+      <img src={props.image} className="h-full w-full rounded-t-lg object-cover aspect-[3/2]"
+      loading="lazy"></img>
       </div>
 <div className={`relative transition-all duration-700 z-10 
   backdrop-blur-[2px]
