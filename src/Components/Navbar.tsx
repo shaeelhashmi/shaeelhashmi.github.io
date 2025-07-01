@@ -71,15 +71,7 @@ const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>,name:string) => 
               About
             </a>
           </div>
-          <div  className="w-full text-center p-3 md:w-auto">
-            <a
-              className={`transition-all duration-300 p-3 border-b-2 ${darkMode ? "border-[rgb(5,5,18)] hover:border-[#e9e9ff]":"border-[#fffbff] hover:border-[rgb(5_0_55)]"}`}
-              href="#skills"
-              onClick={(e)=>{handleLinkClick(e,"skills")}}
-            >
-              Skills
-            </a>
-          </div>
+          
           <div  className="w-full text-center p-3 md:w-auto">
             <a
               className={`transition-all duration-300 p-3 border-b-2 ${darkMode ? "border-[rgb(5,5,18)] hover:border-[#e9e9ff]":"border-[#fffbff] hover:border-[rgb(5_0_55)]"}`}
@@ -98,7 +90,15 @@ const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>,name:string) => 
               Experience
             </a>
           </div>
-       
+       <div  className="w-full text-center p-3 md:w-auto">
+            <a
+              className={`transition-all duration-300 p-3 border-b-2 ${darkMode ? "border-[rgb(5,5,18)] hover:border-[#e9e9ff]":"border-[#fffbff] hover:border-[rgb(5_0_55)]"}`}
+              href="#skills"
+              onClick={(e)=>{handleLinkClick(e,"skills")}}
+            >
+              Skills
+            </a>
+          </div>
       </div>
       <div>
         <button className="p-2 rounded-full fixed right-3 top-4" onClick={() =>{ 

@@ -1,7 +1,9 @@
-
-export default function HTML() {
+interface props { 
+  sizeClass?: string;
+}
+export default function HTML(props: props) {
   return (
-    <svg className="sm:w-[70px] sm:h-[70px] w-[50px] h-[50px] "  viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className={`${ props.sizeClass ||" w-[50px] h-[50px]"}`} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g id="html5">
     <g id="html5_2">
     <path id="Vector" d="M14.0214 90.0345L6 0.000488281H94.1867L86.1653 89.9859L50.0204 100" fill="#E44D26"/>

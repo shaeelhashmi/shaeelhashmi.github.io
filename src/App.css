@@ -4,6 +4,15 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+@keyframes border {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
   .noScroll {
     overflow-x: auto; /* Keep overflow for scrolling */
     overflow-y: hidden; /* Hide vertical scrollbar */
@@ -17,8 +26,6 @@
     content: "";
     position: absolute;
     background-color: white;
-    width: 10px;
-    height: 10px;
     top: 40%;
     left: 10%;
     z-index: -1;

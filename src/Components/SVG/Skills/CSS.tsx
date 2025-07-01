@@ -1,7 +1,9 @@
-
-export default function CSS() {
+interface props { 
+  sizeClass?: string;
+}
+export default function CSS(props: props) {
   return (
-<svg className="sm:w-[70px] sm:h-[70px] w-[50px] h-[50px]"  viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg className={`${ props.sizeClass ||" sm:w-[70px] sm:h-[70px] w-[50px] h-[50px]"}`}  viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="css3">
 <g id="css3_2">
 <path id="polygon2989" d="M94.1749 0.000488281L86.142 89.99L50.0335 100L14.0245 90.0041L6 0.000488281H94.1749Z" fill="#264DE4"/>
