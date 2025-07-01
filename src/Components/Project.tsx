@@ -9,7 +9,7 @@ import SmartphoneImg from "../asset/Images/smartphone-8930867.jpg"
 import Algorithm from "../asset/Images/network-3535305.jpg"
 import Notes from "../asset/Images/notebook-1840276.jpg"
 import ClockImg from "../asset/Images/clock-7258194.jpg"
-import Invader from "../asset/Images/invader-42007_1920.png"
+import Invader from "../asset/Images/aliens-4648205.jpg"
 import HTML from "./SVG/Skills/HTML"
 import CSS from "./SVG/Skills/CSS"
 import Ts from "./SVG/Skills/Ts"
@@ -19,10 +19,10 @@ export default function Project() {
   return (
     <div className="flex items-center justify-center w-full md:my-12 font-franklin my-5" >
        <div className="flex items-center flex-wrap justify-center gap-20 " > 
-       <div className="flex-shrink-0 mx-5"><ProjectBox description="A real-time chat application that allows users to exchange messages instantly, manage friend requests, and store user information securely for ongoing access." Title='Chat application'   Link="https://github.com/shaeelhashmi/Chat-application"  SVG={[Ts,ReactSVG, GoSvg,MySql]} image={SmartphoneImg}/></div>
+       <div className="flex-shrink-0 mx-5"><ProjectBox description="A real-time chat application that allows users to exchange messages instantly, manage friend requests, and store user information securely for ongoing access of usedr data." Title='Chat application'   Link="https://github.com/shaeelhashmi/Chat-application"  SVG={[Ts,ReactSVG, GoSvg,MySql]} image={SmartphoneImg}/></div>
        <div className="flex-shrink-0 mx-5"><ProjectBox description="This project delivers a personalized news recommendation system that curates articles based on individual user interests, manages user accounts, and gathers content from various online sources." Title='Recommendation algorithm'   Link="https://github.com/shaeelhashmi/news-recommendation-algorithm" SVG={[Ts,ReactSVG, GoSvg,MySql]} image={Algorithm}/></div>
-       <div className="flex-shrink-0 mx-5"><ProjectBox description="This app enables users to securely create, update, and delete personal notes, with a streamlined and protected login experience to ensure only authorized access." Title='Notes app'   Link="https://github.com/shaeelhashmi/Notes-app" SVG={[ReactSVG, ExpressJs,NodeJs,MongoDB]} image={Notes}/></div>
-       <div className="flex-shrink-0 mx-5"><ProjectBox description="This is a timetable management system that lets users create custom schedules and perform various time-related tasks, such as managing assigned personnel and updating schedule entries." Title='Time table manager'   Link="https://github.com/shaeelhashmi/Project-TMS" SVG={[HTML, CSS,JS]} image={ClockImg}/></div>
+       <div className="flex-shrink-0 mx-5"><ProjectBox description="This app enables users to securely create, update, and delete personal notes, with a streamlined and protected login experience integrated with google auth to ensure safe and authorized access." Title='Notes app'   Link="https://github.com/shaeelhashmi/Notes-app" SVG={[ReactSVG, ExpressJs,NodeJs,MongoDB]} image={Notes}/></div>
+       <div className="flex-shrink-0 mx-5"><ProjectBox description="This is a timetable management system that lets users create custom schedules and perform various time-related tasks, such as managing assigned personnel and updating schedule entries." Title='Time table manager'   Link="https://github.com/shaeelhashmi/Project-TMS" SVG={[HTML, CSS,JS, NodeJs,ExpressJs]} image={ClockImg}/></div>
        <div className="flex-shrink-0 mx-5"><ProjectBox description="This is an arcade-style space shooter game designed with structured programming concepts, offering organized gameplay mechanics and efficient data handling for a smooth user experience." Title='Space Invaders'   Link="https://github.com/shaeelhashmi/spaceInvaders" SVG={[C]} image={Invader}/></div>
        </div>
     </div>

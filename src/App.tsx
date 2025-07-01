@@ -2,13 +2,13 @@ import { lazy, Suspense,useRef,useEffect } from 'react'
 import './App.css'
 import './index.css'
 import { useDispatch } from 'react-redux'
-import Home from './Components/Home'
 import Loader from './Components/Loader'
 import Footer from './Components/Footer'
 import NavBar from './Components/Navbar'
 import { useSelector } from 'react-redux'
 import { appear } from './Components/Slice/FooterAppeared'
 const Hero= lazy(() => import('./Components/Hero'))
+const Home = lazy(() => import('./Components/Home'))
 
 export default function App() {
   const dispatch = useDispatch();
