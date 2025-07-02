@@ -10,7 +10,7 @@ interface props {
 export default function ProjectBox(props:props) {
   const isDarkMode = useSelector((state: any) => state.DarkMode.value);
   return (
-    <div className={`relative  w-[300px] h-[535px] 
+    <div className={`relative  w-[300px] h-[560px] sm:h-[535px] 
 flex flex-col justify-between ${isDarkMode ? 'bg-purple-900/10' : 'bg-fuchsia-400/20'}  rounded-lg`}>
       <div className="h-1/2 w-full ">
       <img src={props.image} className="h-full w-full rounded-t-lg object-cover aspect-[3/2]"
