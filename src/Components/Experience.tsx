@@ -21,7 +21,7 @@ export default function Experience() {
         <div className="md:mt-32">
       
       <h1 className="text-2xl font-subheading font-semibold">What I did</h1>
-      <ul className="list-disc list-inside text-md font-calibri pl-10">
+      <ul className="list-disc list-inside md:text-lg text-base font-calibri pl-10">
     <li className="my-1">Created issues on forked repositories to help boost the SEO performance of the original repositories.</li>
     <li className="my-1">Opened 40 issues and merged 40 Dependabot pull requests on a daily basis.</li>
     <li className="my-1">Developed an automation script to streamline issue creation, reducing manual effort by approximately 30%.</li>

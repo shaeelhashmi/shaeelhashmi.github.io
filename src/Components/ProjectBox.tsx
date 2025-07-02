@@ -10,7 +10,7 @@ interface props {
 export default function ProjectBox(props:props) {
   const isDarkMode = useSelector((state: any) => state.DarkMode.value);
   return (
-    <div className={`relative  w-[300px] h-[520px] 
+    <div className={`relative  w-[300px] h-[535px] 
 flex flex-col justify-between ${isDarkMode ? 'bg-purple-900/10' : 'bg-fuchsia-400/20'}  rounded-lg`}>
       <div className="h-1/2 w-full ">
       <img src={props.image} className="h-full w-full rounded-t-lg object-cover aspect-[3/2]"
@@ -28,7 +28,7 @@ flex flex-col justify-between ${isDarkMode ? 'bg-purple-900/10' : 'bg-fuchsia-40
       <h1 className="font-semibold text-center text-2xl font-subheading px-2 h-16">{props.Title}</h1>
     </div>
     <div className="h-full p-2 font-calibri">
-      <p className={`text-md drop-shadow-sm`}>{props.description}</p>
+      <p className={` text-base drop-shadow-sm`}>{props.description}</p>
     </div>
     <div className="w-full p-4 flex justify-between">
       {props.SVG.map((SvgComponent, index) => (
