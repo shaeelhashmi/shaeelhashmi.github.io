@@ -1,23 +1,34 @@
 import { useSelector } from "react-redux";
+
 export default function Experience() {
   const isDarkMode = useSelector((state: any) => state.DarkMode.value);
+
   return (
-    <div className="md:my-12 my-5" >
-    <div className={`relative overflow-hidden w-64 mx-auto ${isDarkMode?"bg-[#3b3b3b5d]":"bg-[#ffd7d74a]"} relative overflow-hidden md:w-[180px] sm:w-[220px] xs:w-[220px] w-[180px] md:h-[300px] sm:h-[270px] xs:h-[270px] h-[300px] 
-flex flex-col justify-between z-10  p-2 border-2 ${isDarkMode?"border-gray-500    shadow-[0_0_10px_2px_rgba(255,255,255)]":" shadow-[0_0_10px_2px_rgba(135,118,118)] " } backdrop-blur-[2px]
-before:content-[''] before:absolute before:top-0 before:left-0 before:w-[60%] before:h-full 
-before:bg-[#ffffff3f] before:skew-x-[45deg] before:scale-150 before:-translate-x-[300%] 
-before:transition-transform before:duration-300 before:pointer-events-none before:-z-10
-hover:before:translate-x-[400%] mb-10` }style={{ textShadow: isDarkMode?'0 0 1px white':  '0 0 1px black'}}>
-      <div>
-        <h1 className="sm:text-2xl text-lg font-bold font-franklin">
-        Ninja codes
-        <br></br>
-       <span className="font-light italic text-xs font-times mt-2"> Intern  (March - April 2025)</span>
-        </h1>
-        <p className="font-calibri">Interned at Ninja Codes and increased SEO of open-sourced repos by creating issues on forked repos and also automated processes and performed data processing</p>
+    <div className="md:my-12 my-5 w-full">
+      <div className="px-10 w-full flex md:flex-row flex-col gap-4 place-content-center md:h-[300px]">
+        <div>
+          <h1 className="font-semibold md:text-4xl text-3xl font-franklin mb-1">
+            Ninja codes
+          </h1>
+          <p className="font-light italic text-sm font-times my-1">
+            Intern-Hybrid
+          </p>
+          <p className="text-sm font-times font-light italic my-1">
+            March 2025 - April 2025
+          </p>
+        </div>
+        <div className={`w-full md:w-px md:h-[300px] ${!isDarkMode?"bg-gray-700":"bg-gray-400"}  mx-4 `} />
+        <div className="md:mt-32">
+      
+      <h1 className="text-2xl font-subheading font-semibold">What I did</h1>
+      <ul className="list-disc list-inside text-md font-calibri pl-10">
+    <li className="my-1">Created issues on forked repositories to help boost the SEO performance of the original repositories.</li>
+    <li className="my-1">Opened 40 issues and merged 40 Dependabot pull requests on a daily basis.</li>
+    <li className="my-1">Developed an automation script to streamline issue creation, reducing manual effort by approximately 30%.</li>
+    <li className="my-1">Tracked and maintained repository traffic data using Google Sheets.</li>
+  </ul>
+        </div>
       </div>
     </div>
-    </div>
-  )
+  );
 }

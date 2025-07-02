@@ -19,6 +19,7 @@ export default {
         'franklin': ['Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif'],
         'calibri': ['Calibri', 'Arial', 'sans-serif'],
         'times': ['Times New Roman', 'serif'],
+        'subheading':['Georgia', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial'],
       },
     },
   },

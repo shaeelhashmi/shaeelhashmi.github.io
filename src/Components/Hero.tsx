@@ -35,7 +35,7 @@ export default function Hero() {
       
     </div>
     <div className="w-full flex items-center justify-center flex-col max-w-[700px] p-3 mx-auto text-center">
-        <h1 className="md:text-5xl text-4xl my-5 font-bold font-heading">About</h1>
+        <h1 className="md:text-6xl text-5xl my-5 font-bold font-heading">About</h1>
         <p className="sm:text-lg text-md">Hi, I’m a passionate full-stack developer who loves turning complex problems into elegant web solutions. Whether it’s building real-time apps with WebSockets and Go,crafting interactive UIs with React, making fullstack apps using Node.js and Express or working with databases like MongoDB and SQL, I aim to create clean, high-performance experiences. I'm also an active open-source contributor and a CS student at Bahria University.</p>
     </div>
     </header>
