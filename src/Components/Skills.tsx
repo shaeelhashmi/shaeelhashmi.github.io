@@ -7,7 +7,7 @@ interface SkillsProps {
 }
 export default function Skills(props: SkillsProps) {
   return (
-  <div className={"opacity-0 duration-1000 transition-all "+props.className} ref={props.SkillRef} data-translate={props.className}>
+  <div  ref={props.SkillRef} data-translate={props.className}>
       <h1 className="font-semibold  md:text-4xl text-3xl h-[50px]  font-franklin text-center my-2">{props.title}</h1>
       <div className="flex flex-wrap  gap-10 w-full items-center justify-center" >
         {

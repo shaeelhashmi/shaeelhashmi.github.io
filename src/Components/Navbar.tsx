@@ -7,14 +7,15 @@ import { Moon } from "lucide-react";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import Logo from "./SVG/Logo";
-interface NavBarProps {
-  handleScroll: () => void;
-}
-export default function NavBar(props: NavBarProps) {
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import gsap from "gsap";
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+export default function NavBar() {
 const darkMode = useSelector((state: any) => state.DarkMode.value);
 const dispatch = useDispatch();
 const [open, setOpen] = useState(false);
-const { handleScroll } = props;
 useEffect(() => {
   const isDarkMode = localStorage.getItem("darkMode");
   if (isDarkMode === null) {
@@ -24,26 +25,31 @@ useEffect(() => {
     dispatch(Change(isDarkMode === "true"));
   }
 },[]);
-const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>,name:string) => {
-    e.preventDefault(); 
-    setOpen(false);
-    if (name === "#") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      return;
-    }
-    
-    const target = document.getElementById(name);
-    if (target) {
-      window.removeEventListener("scroll", handleScroll);
-      target.scrollIntoView({ behavior: "smooth" });
+const handleLinkClick = (
+  e: React.MouseEvent<HTMLAnchorElement>,
+  name: string
+) => {
+  e.preventDefault();
 
-      // Wait for scroll to finish (adjust time as needed)
-      setTimeout(() => {
-        handleScroll();
-        window.addEventListener("scroll", handleScroll);
-      }, 500); // time depends on how long your scroll takes
+  const navHeight = 64; // px — adjust as needed
+
+  let targetY = 0;
+  if (name !== "#") {
+    const el = document.getElementById(name);
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY;
+      targetY = top - navHeight; // subtract navbar height
     }
   }
+
+  gsap.to(window, {
+    duration: 0.5,
+    scrollTo: targetY,
+    ease: "linear",
+  });
+
+  setTimeout(() => setOpen(false), 300);
+};
 
   return (
     <nav className={` fixed top-0 w-full z-50 grid md:grid-cols-[20%,1fr,20%] grid-cols-1  justify-between p-2  ${darkMode ?"bg-[rgb(5,5,18)] text-white":"bg-[#fffbff] text-black"} transition-all duration-300`}>

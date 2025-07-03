@@ -1,11 +1,9 @@
 
 export default function Fiverr() {
   return (
-<svg className=" w-[60px] h-[60px] mx-auto" viewBox="0 0 118 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg className=" md:w-[60px] md:h-[60px] w-[50px] h-[50px] mx-auto" viewBox="0 0 118 118" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="59" cy="59" r="41.772" fill="white"/>
 <path d="M118 59C118 26.4155 91.5845 0 59 0C26.4155 0 0 26.4155 0 59C0 91.5845 26.4155 118 59 118C91.5845 118 118 91.5845 118 59ZM85.0591 90.27H69.5657V55.9792H54.7378V90.27H39.1524V55.9792H30.3142V43.2942H39.1524V39.4427C39.1524 29.3914 46.7563 22.5333 58.0678 22.5333H69.5681V35.2159H60.6355C57.0223 35.2159 54.7402 37.1889 54.7402 40.3843V43.2942H85.0615V90.27H85.0591Z" fill="#1DBF73"/>
 </svg>
-
-
   )
 }

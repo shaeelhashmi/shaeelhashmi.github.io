@@ -11,7 +11,10 @@ export default function Experience() {
             Ninja codes
           </h1>
           <p className="font-light italic text-sm font-times my-1">
-            Intern-Hybrid
+            SEO Intern
+          </p>
+           <p className="font-light italic text-sm font-times my-1">
+            Hybrid
           </p>
           <p className="text-sm font-times font-light italic my-1">
             March 2025 - April 2025
