@@ -54,8 +54,6 @@ export default function Main(props: MainProps) {
         </div>
         </div>
       </section>
-    
-    
     </main>
   );
 }

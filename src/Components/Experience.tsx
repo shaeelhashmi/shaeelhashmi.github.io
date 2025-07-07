@@ -11,7 +11,7 @@ export default function Experience() {
             Ninja codes
           </h1>
           <p className="font-light italic text-sm font-times my-1">
-            SEO Intern
+            Automation developer and SEO Intern
           </p>
            <p className="font-light italic text-sm font-times my-1">
             Hybrid
