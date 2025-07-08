@@ -103,7 +103,7 @@ const ParticleDesign = () => {
         id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={options}
-        className="-z-30 absolute"
+        className="absolute top-0 left-0 w-full h-full -z-30"
       />
     );
   }
