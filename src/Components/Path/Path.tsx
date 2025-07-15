@@ -67,7 +67,8 @@ export default function Path() {
       }
 })
   return (
-    <div ref={main}>
+    <div ref={main} >
+
         <Hero />
         <Home skillRef={skillRef} projectRef={projectRef} ExperienceRef={ExperienceRef} frontendSkillRef={frontendSkillRef} backendSkillRef={backendSkillRef} databaseSkillRef={databaseSkillRef} otherSkillRef={otherSkillRef}/>
         <Footer footerRef={footerRef}/>

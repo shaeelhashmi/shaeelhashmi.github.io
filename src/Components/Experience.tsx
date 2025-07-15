@@ -5,8 +5,8 @@ export default function Experience() {
 
   return (
     <div className="md:my-12 my-5 w-full">
-      <div className="px-10 w-full flex md:flex-row flex-col gap-4 place-content-center md:h-[300px]">
-        <div>
+      <div className="px-10 w-full flex lg:flex-row flex-col gap-4 place-content-center lg:h-[300px] ">
+        <div className={`lg:w-[400px] w-full lg:border-r-2 ${!isDarkMode?"border-gray-700":"border-gray-400"}`}>
           <h1 className="font-semibold md:text-4xl text-3xl font-franklin mb-1">
             Ninja codes
           </h1>
@@ -20,8 +20,8 @@ export default function Experience() {
             March 2025 - April 2025
           </p>
         </div>
-        <div className={`w-full md:w-px md:h-[300px] ${!isDarkMode?"bg-gray-700":"bg-gray-400"}  mx-4 `} />
-        <div className="md:mt-32">
+      
+        <div className="lg:mt-32">
       
       <h1 className="text-2xl font-subheading font-semibold">What I did</h1>
       <ul className="list-disc list-inside md:text-lg text-base font-calibri pl-10">

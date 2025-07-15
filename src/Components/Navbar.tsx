@@ -71,8 +71,8 @@ const handleLinkClick = (
           <div  className="w-full text-center p-3 md:w-auto">
             <a
               className={`transition-all duration-300 p-3 border-b-2 ${darkMode ? "border-[rgb(5,5,18)] hover:border-[#e9e9ff]":"border-[#fffbff] hover:border-[rgb(5_0_55)]"} `}
-              href="#"
-        onClick={(e)=>handleLinkClick(e,"#")}
+              href="#about"
+        onClick={(e)=>handleLinkClick(e,"about")}
             >
               About
             </a>

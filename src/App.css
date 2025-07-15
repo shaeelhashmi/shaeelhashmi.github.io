@@ -34,7 +34,47 @@
   .noScroll::-webkit-scrollbar {
     display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
   }
+.card{
+  margin: 0 auto;
+  padding: 2em;
+  position: relative;
+}
 
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card::after, .card::before{
+  content: '';
+  position: absolute;
+  /* height: 105%;
+  width: 105%; */
+  background-image: conic-gradient(from var(--angle), transparent 70%,blue);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  border-radius: 12px;
+  animation: 3s spin linear infinite;
+}
+.card::before{
+  filter: blur(0rem);
+  opacity: 1;
+}
+.card.dark-mode::after,
+.card.dark-mode::before {
+  background-image: conic-gradient(from var(--angle), transparent 70%, #daa4ff); /* or another dark-mode color */
+}
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}
   html {
   scroll-behavior: smooth;
     scroll-padding-top: 300px;

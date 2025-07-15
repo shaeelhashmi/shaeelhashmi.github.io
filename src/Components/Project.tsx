@@ -13,7 +13,7 @@ import C from "./SVG/Skills/C"
 import Tailwind from "./SVG/Skills/Tailwind"
 export default function Project() {
   return (
-    <div className="flex items-center justify-center w-full md:my-12 font-franklin my-5" >
+    <div className="flex items-center justify-center w-full md:my-12 font-franklin my-5 px-10 " >
        <div className="flex items-center flex-wrap justify-center gap-20 " > 
        <div className="flex-shrink-0 mx-5"><ProjectBox description="A real-time chat application that allows users to exchange messages instantly, manage friend requests, and store user information securely for ongoing access of user data." Title='Chat application'   Link="https://github.com/shaeelhashmi/Chat-application"  SVG={[Ts,Tailwind,ReactSVG, GoSvg,MySql]} image={"https://cdn.jsdelivr.net/gh/shaeelhashmi/shaeelhashmi.github.io/src/asset/Images/smartphone-8930867.jpg"}/></div>
        <div className="flex-shrink-0 mx-5"><ProjectBox description="This project delivers a personalized news recommendation system that curates articles based on individual user interests, manages user accounts, and gathers content from various online sources." Title='Recommendation algorithm'   Link="https://github.com/shaeelhashmi/news-recommendation-algorithm" SVG={[Ts,Tailwind,ReactSVG, GoSvg,MySql]} image={"https://cdn.jsdelivr.net/gh/shaeelhashmi/shaeelhashmi.github.io/src/asset/Images/network-3535305.jpg"}/></div>
