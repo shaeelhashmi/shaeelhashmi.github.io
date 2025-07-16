@@ -36,7 +36,7 @@ export default function CTABtn() {
 
       <span  className="relative z-10 block px-6 py-3 rounded-xl bg-gray-950">
         <div  className="relative z-10 flex items-center space-x-2">
-          <span  className="transition-all duration-500 group-hover:translate-x-1"
+          <span  className="transition-all duration-500 group-hover:translate-x-1 font-franklin text-lg "
             >Let's get started</span>
           <svg
              className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1 group-hover:rotate-90"

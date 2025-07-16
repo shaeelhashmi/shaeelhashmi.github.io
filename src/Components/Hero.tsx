@@ -5,7 +5,10 @@ import Github from "./SVG/Github";
 import LinkedIn from "./SVG/Linkedin";
 import { useSelector } from "react-redux";
 import CTABtn from "./Utils/CTABtn";
-export default function Hero() {
+interface props{
+  aboutRef: React.RefObject<HTMLDivElement>;
+}
+export default function Hero({ aboutRef }: props) {
   const isDarkMode = useSelector((state: any) => state.DarkMode.value);
   return (
     <header className="min-h-fit  mt-16 " >
@@ -37,7 +40,7 @@ export default function Hero() {
       <Canvas1 />
       <CTABtn />
     </div>
-    <section className=" flex items-center justify-center flex-col  p-3 text-center px-10 " id="about">
+    <section className=" flex items-center justify-center flex-col  p-3 text-center px-10 " id="about" data-translate="translate-x-64" ref={aboutRef}>
         <h1 className=" font-bold  my-5 font-heading md:text-6xl text-5xl text-center">About</h1>
         <div className="flex    gap-20 md:my-12 my-5 lg:flex-row flex-col mx-auto">
         <div className={`hover:scale-105 lg:w-[400px] w-full transition-all duration-300 ease-in-out rounded-xl ${isDarkMode ? "bg-[#0d0727]" : "bg-[#f0ddfd]"} `}>
@@ -51,7 +54,7 @@ export default function Hero() {
           <h1 className="font-semibold text-center md:text-4xl text-3xl font-franklin">What I Can Build for You</h1>
        <div className=" backdrop-blur-md p-4 bg-[#402d9513] rounded-lg">
         <h2 className="font-subheading text-2xl font-semibold text-left">Full-stack websites</h2>
-        <p className="md:text-lg text-base text-left">I specialize in building responsive and interactive web applications using the MERN stack (MongoDB, Express.js, React, and Node.js) and modern technologies using Golang and MySQL. My goal is to create seamless user experiences while ensuring efficient backend performance.</p>
+        <p className="md:text-lg text-base text-left">I specialize in building responsive and interactive web applications using the MERN stack (MongoDB, Express.js, React, and Node.js) and other technologies like Golang and MySQL. My goal is to create seamless user experiences while ensuring efficient backend performance.</p>
        </div>
        <div className="backdrop-blur-md p-4 bg-[#402d9513] rounded-lg">
   <h2 className="font-subheading text-2xl font-semibold text-left">Website scrapers</h2>

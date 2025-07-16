@@ -1,7 +1,7 @@
 
 export default function Upwork() {
   return (
-    <svg className="w-[60px] h-[60px] mx-auto" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+    <svg className=" w-[100px] h-[70px] mx-auto" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
 <rect x="0.253906" y="0.799316" width="23.4981" height="23.4981" rx="11.749" fill="url(#pattern0_2003_24)"/>
 <defs>
 <pattern id="pattern0_2003_24" patternContentUnits="objectBoundingBox" width="1" height="1">
