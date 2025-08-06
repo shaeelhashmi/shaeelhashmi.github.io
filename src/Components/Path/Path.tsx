@@ -19,7 +19,7 @@ export default function Path() {
         const GetintouchRef= useRef<HTMLDivElement>(null);
         const aboutRef = useRef<HTMLDivElement>(null);
        useGSAP(() => {
-        const elements= [skillRef, frontendSkillRef, backendSkillRef, databaseSkillRef, otherSkillRef, projectRef, ExperienceRef, GetintouchRef, aboutRef];
+        const elements= [skillRef, frontendSkillRef, backendSkillRef, databaseSkillRef, otherSkillRef];
       elements.forEach((ref) => {
         // Check data-translate attribute for each ref
         const translateX = ref.current?.getAttribute('data-translate') === '-translate-x-64' ? 400 : -400;
@@ -38,7 +38,51 @@ export default function Path() {
             }
           });
         }
+      
       })
+      const otherElements=[ExperienceRef, GetintouchRef,projectRef,aboutRef];
+      otherElements.forEach((ref) => {
+        if (ref.current) {
+          const translateX = ref.current.getAttribute('data-translate') === 'translate-x-64' ? -400 : 400;
+          gsap.fromTo(ref.current, { opacity: 0, x: translateX }, {
+            opacity: 1,
+            x: 0,
+            duration: 1,
+            ease: "sine.out",
+            immediateRender: true,
+            scrollTrigger: {
+              trigger: ref.current,
+              start: "top 80%",
+              toggleActions: "play none none none",
+              once: true,
+            }
+          });
+        }
+        const directDivChildren = ref.current?.querySelectorAll(':scope > div > div ');
+        if (directDivChildren && ref.current) {
+          directDivChildren.forEach((child) => {
+            const index = Array.from(directDivChildren).indexOf(child as Element);
+            const xPos = ref.current?.getAttribute('data-translate') === 'translate-x-64' ? index % 2 === 0 ? 400 : -400 : index % 2 === 0 ? -400 : 400;
+            gsap.fromTo(child, { opacity: 0, x: xPos }, {
+              opacity: 1,
+              x: 0,
+              duration: 0.5,
+              ease: "power1.out",        
+              scrollTrigger: {
+                trigger: child,
+                start: "top 80%",
+                toggleActions: "play none none none",
+                once: true,
+              },
+                  onComplete: () => {
+                    gsap.set(child, { clearProps: "transform" });
+                  }
+              
+            });
+          })
+        }
+      })
+
 
  
 })

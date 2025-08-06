@@ -41,7 +41,7 @@ flex flex-col justify-between ${isDarkMode ? 'bg-purple-900/10' : 'bg-fuchsia-40
       <div className="w-full font-calibri   z-10 ">
         <a
           href={props.Link}
-          className="block w-full py-2 text-center transition-all duration-500 bg-blue-700 hover:bg-blue-600 text-white rounded-b-lg font-serif font-[500] hover:scale-105"
+          className="block w-full py-2 text-center transition-all duration-500 bg-blue-700 hover:bg-blue-600 text-white rounded-b-lg font-serif font-[500] "
           target="_blank"
           rel="noopener noreferrer"
         >

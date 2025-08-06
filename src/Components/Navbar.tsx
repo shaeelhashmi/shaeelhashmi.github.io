@@ -52,25 +52,20 @@ const handleLinkClick = (
 };
 
   return (
-    <nav className={` fixed top-0 w-full z-50 grid md:grid-cols-[20%,1fr,20%] grid-cols-1  justify-between p-2  ${darkMode ?"bg-[rgb(5,5,18)] text-white":"bg-[#fffbff] text-black"} transition-all duration-300`}>
+    <nav className={` fixed top-0 w-full z-50 md:flex items-center md:justify-evenly justify-end p-2   ${darkMode ?"bg-[rgb(5,5,18)] text-white":"bg-[#fffbff] text-black"} transition-all duration-300 grid grid-cols-2`}>
       <div className="flex items-center justify-start p-3">
-        <button
-          className="md:hidden block text-2xl p-2 rounded-full"
-        onClick={() => setOpen(!open)}
-        >
-          <AlignJustify />
-        </button>
+       
         <h1 className="text-2xl font-bold font-heading ml-3"><Logo/></h1>
         
       </div>
       <div
         className={`md:flex md:flex-row flex-col items-center justify-center gap-4 text-md font-times transition-[max-height] duration-1000  overflow-hidden md:max-h-none ${
           open ? "max-h-[500px]" : "max-h-0"
-        } text-lg `}
+        } text-lg  col-span-3 row-start-2`}
       >
           <div  className="w-full text-center p-3 md:w-auto">
             <a
-              className={`transition-all duration-300 p-3 border-b-2 ${darkMode ? "border-[rgb(5,5,18)] hover:border-[#e9e9ff]":"border-[#fffbff] hover:border-[rgb(5_0_55)]"} `}
+              className={`transition-all duration-300 p-3  hover:bg-[#7d7d7d1f] backdrop-blur-md relative line`}
               href="#about"
         onClick={(e)=>handleLinkClick(e,"about")}
             >
@@ -79,7 +74,7 @@ const handleLinkClick = (
           </div>
            <div  className="w-full text-center p-3 md:w-auto">
             <a
-              className={`transition-all duration-300 p-3 border-b-2 ${darkMode ? "border-[rgb(5,5,18)] hover:border-[#e9e9ff]":"border-[#fffbff] hover:border-[rgb(5_0_55)]"}`}
+              className={`transition-all duration-300 p-3  hover:bg-[#7d7d7d1f] backdrop-blur-md relative line`}
               href="#Experience"
            onClick={(e)=>{handleLinkClick(e,"Experience")}}
             >
@@ -88,7 +83,7 @@ const handleLinkClick = (
           </div>
           <div  className="w-full text-center p-3 md:w-auto">
             <a
-              className={`transition-all duration-300 p-3 border-b-2 ${darkMode ? "border-[rgb(5,5,18)] hover:border-[#e9e9ff]":"border-[#fffbff] hover:border-[rgb(5_0_55)]"}`}
+              className={`transition-all duration-300 p-3  hover:bg-[#7d7d7d1f] backdrop-blur-md relative line`}
               href="#Projects"
              onClick={(e)=>{handleLinkClick(e,"Projects")}}
   >
@@ -98,7 +93,7 @@ const handleLinkClick = (
          
        <div  className="w-full text-center p-3 md:w-auto">
             <a
-              className={`transition-all duration-300 p-3 border-b-2 ${darkMode ? "border-[rgb(5,5,18)] hover:border-[#e9e9ff]":"border-[#fffbff] hover:border-[rgb(5_0_55)]"}`}
+              className={`transition-all duration-300 p-3  hover:bg-[#7d7d7d1f] backdrop-blur-md relative line`}
               href="#skills"
               onClick={(e)=>{handleLinkClick(e,"skills")}}
             >
@@ -107,19 +102,29 @@ const handleLinkClick = (
           </div>
           <div  className="w-full text-center p-3 md:w-auto">
             <a
-              className={`transition-all duration-300 p-3 border-b-2 ${darkMode ? "border-[rgb(5,5,18)] hover:border-[#e9e9ff]":"border-[#fffbff] hover:border-[rgb(5_0_55)]"}`}
+              className={`transition-all duration-300 p-3  hover:bg-[#7d7d7d1f] backdrop-blur-md relative line`}
               href="#contact"
               onClick={(e)=>{handleLinkClick(e,"contact")}}
             >
               Contact
             </a>
           </div>
+       
       </div>
-      <div>
-        <button className="p-2 rounded-full fixed right-3 top-5 " onClick={() =>{ 
+    <div className=" md:justify-self-auto justify-self-end  flex space-x-3">
+        <button className="p-2 rounded-full justify-self-end md:justify-self-auto bg-[#7d7d7d1f] backdrop-blur-md hover:scale-110 transition-all duration-300" onClick={() =>{ 
           dispatch(Change(!darkMode))
-          localStorage.setItem("darkMode", (!darkMode).toString());}}>
+          localStorage.setItem("darkMode", (!darkMode).toString());}}
+           aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}>
           {darkMode ? <Sun /> : <Moon />}
+          
+        </button>
+         <button
+         aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links"
+        className="md:hidden block text-2xl p-2  bg-[#7d7d7d1f] backdrop-blur-md hover:scale-110 transition-all duration-300"
+        onClick={() => setOpen(!open)}
+        >
+          <AlignJustify />
         </button>
       </div>
     </nav>

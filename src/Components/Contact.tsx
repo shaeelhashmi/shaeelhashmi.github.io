@@ -24,6 +24,7 @@ export default function Contact({GetintouchRef}: ContactProps) {
         you have. I’m always open to new opportunities and conversations.
       </p>
       <div className="flex  items-center justify-center flex-wrap gap-4">
+        <div>
       <a href="https://www.fiverr.com/s/8zNZXbv" className="mx-5" target="_blank">
 
           <SkillBox svg={<div className="flex items-center justify-center gap-4 max-w-[320px]">
@@ -35,7 +36,10 @@ export default function Contact({GetintouchRef}: ContactProps) {
               </p>
            
             </div>
-            </div>}></SkillBox></a>
+            </div>}></SkillBox>
+            </a>
+            </div>
+            <div>
             <a href="https://www.upwork.com/freelancers/~011e1744278fd5fcd2" className="mx-5" target="_blank">
            <SkillBox svg={
             <div className="flex items-center justify-center gap-4 max-w-[320px]">
@@ -48,6 +52,8 @@ export default function Contact({GetintouchRef}: ContactProps) {
           
             </div>
             </div>}></SkillBox></a>
+            </div>
+            <div>
           
                      <a href="mailto:shaeelhashmi332@gmail.com" className="mx-5" target="_blank">
             <SkillBox svg={
@@ -63,6 +69,7 @@ export default function Contact({GetintouchRef}: ContactProps) {
                 </div>
             }></SkillBox>
           </a> 
+          </div>
    
           </div>
                     <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-700'} mt-12`}>

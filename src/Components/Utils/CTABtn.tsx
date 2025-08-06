@@ -24,7 +24,7 @@ export default function CTABtn() {
   });
 };
   return (
-   <div  className="flex items-center justify-center ">
+
   <div  className="relative group">
     <a
        className="relative inline-block p-px font-semibold leading-6 text-white bg-gray-800  cursor-pointer rounded-xl transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95"
@@ -56,6 +56,6 @@ export default function CTABtn() {
       </span>
     </a>
   </div>
-</div>
+
   )
 }

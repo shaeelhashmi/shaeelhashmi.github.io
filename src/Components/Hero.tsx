@@ -28,10 +28,12 @@ export default function Hero({ aboutRef }: props) {
       loop
     />
       <div className="z-20 flex justify-center mt-4 ">
-          <a href="https://github.com/shaeelhashmi" className="mx-2" target="_blank">
+          <a href="https://github.com/shaeelhashmi" className="mx-2" target="_blank"
+          aria-label="GitHub profile" rel="noopener noreferrer">
             <Github />
           </a>
-          <a href="https://www.linkedin.com/in/muhammad-shaeel-arshad-hashmi/" className="mx-2" target="_blank" >
+          <a href="https://www.linkedin.com/in/muhammad-shaeel-arshad-hashmi/" className="mx-2" target="_blank" 
+            aria-label="Linkedin profile" rel="noopener noreferrer">
             <LinkedIn />
           </a>
       </div> 
@@ -43,8 +45,8 @@ export default function Hero({ aboutRef }: props) {
     <section className=" flex items-center justify-center flex-col  p-3 text-center px-10 " id="about" data-translate="translate-x-64" ref={aboutRef}>
         <h1 className=" font-bold  my-5 font-heading md:text-6xl text-5xl text-center">About</h1>
         <div className="flex    gap-20 md:my-12 my-5 lg:flex-row flex-col mx-auto">
-        <div className={`hover:scale-105 lg:w-[400px] w-full transition-all duration-300 ease-in-out rounded-xl ${isDarkMode ? "bg-[#0d0727]" : "bg-[#f0ddfd]"} `}>
-        <div className={`relative card  w-full  rounded-xl   ${isDarkMode ? "bg-[#0d0727]" : "bg-[#f0ddfd] dark-mode"} md:after:w-[105%] md:after:h-[105%] after:w-[103%] after:h-[103%] h-full`}>
+        <div className={` lg:w-[400px] w-full transition-all duration-300 ease-in-out rounded-xl ${isDarkMode ? "bg-[#0d0727]" : "bg-[#f0ddfd]"} hover:scale-105`}>
+        <div className={`relative card  w-full  rounded-xl   ${isDarkMode ? "bg-[#0d0727]" : "bg-[#f0ddfd] dark-mode"} md:after:w-[105%] md:after:h-[105%] after:w-[103%] after:h-[103%] h-full `}>
           <h1 className="font-semibold text-center md:text-4xl text-3xl font-franklin">Introduction</h1>
         <p className="md:text-lg text-base text-left mt-[1rem]">Hi, I’m a full-stack developer and a Computer Science student at Bahria University who’s passionate about turning ideas into meaningful digital solutions. I love tackling real-world problems, whether it’s through building complete web applications or automating complex data tasks. I’m constantly exploring new ways to improve my work, contribute to open-source projects, and grow as a developer with every challenge I take on.</p>
         </div>
