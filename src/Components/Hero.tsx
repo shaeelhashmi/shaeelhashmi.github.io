@@ -42,9 +42,9 @@ export default function Hero({ aboutRef }: props) {
       <Canvas1 />
       <CTABtn />
     </div>
-    <section className=" flex items-center justify-center flex-col  p-3 text-center px-10 " id="about" data-translate="translate-x-64" ref={aboutRef}>
+    <section className=" flex items-center justify-center flex-col  p-3 text-center  " id="about" data-translate="translate-x-64" ref={aboutRef}>
         <h1 className=" font-bold  my-5 font-heading md:text-6xl text-5xl text-center">About</h1>
-        <div className="flex    gap-20 md:my-12 my-5 lg:flex-row flex-col mx-auto">
+        <div className="flex    gap-20 md:my-12 my-5 lg:flex-row flex-col mx-auto px-2 xs:px-10">
         <div className={` lg:w-[400px] w-full transition-all duration-300 ease-in-out rounded-xl ${isDarkMode ? "bg-[#0d0727]" : "bg-[#f0ddfd]"} hover:scale-105`}>
         <div className={`relative card  w-full  rounded-xl   ${isDarkMode ? "bg-[#0d0727]" : "bg-[#f0ddfd] dark-mode"} md:after:w-[105%] md:after:h-[105%] after:w-[103%] after:h-[103%] h-full `}>
           <h1 className="font-semibold text-center md:text-4xl text-3xl font-franklin">Introduction</h1>

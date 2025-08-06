@@ -34,16 +34,16 @@ export default function Main(props: MainProps) {
 
   return (
     <main className="  z-20 overflow-hidden ">
-        <section  className="mx-auto  z-10 min-h-fit  overflow-hidden flex flex-col items-center justify-center px-10 " ref={ExperienceRef} data-translate="-translate-x-64" id="Experience">
+        <section  className="mx-auto  z-10 min-h-fit  overflow-hidden flex flex-col items-center justify-center  " ref={ExperienceRef} data-translate="-translate-x-64" id="Experience">
         <h1 className="md:text-6xl text-5xl font-bold  my-5 font-heading ">Experience</h1>    
         <Experience />
       </section>
-        <section  className="mx-auto  z-10 min-h-fit   overflow-hidden flex flex-col items-center justify-center  px-10" ref={projectRef} data-translate="translate-x-64" id="Projects">
+        <section  className="mx-auto  z-10 min-h-fit   overflow-hidden flex flex-col items-center justify-center  " ref={projectRef} data-translate="translate-x-64" id="Projects">
         <h1 className="font-bold  my-5 font-heading md:text-6xl text-5xl ">Projects</h1>
       <Project />
       </section>
 
-       <section className="mx-auto  z-10 min-h-fit  overflow-hidden flex flex-col items-center justify-center  px-10" ref={skillRef} data-translate="-translate-x-64" id="skills">
+       <section className="mx-auto  z-10 min-h-fit  overflow-hidden flex flex-col items-center justify-center  " ref={skillRef} data-translate="-translate-x-64" id="skills">
         <h1 className=" font-bold  my-5 font-heading md:text-6xl text-5xl" >Skills</h1>
       <div className="flex flex-col items-center justify-center w-full space-y-4  ">
         <Skills skills={[<HTML></HTML>,<CSS/>,<JS></JS>,<Ts></Ts>,<ReactSVG/>,<Tailwind></Tailwind>,<Bootstrap/>,<Three/>,<GsapSvg/>]} title="Frontend" SkillRef={frontendSkillRef} className="-translate-x-64" />

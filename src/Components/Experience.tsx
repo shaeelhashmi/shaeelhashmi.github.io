@@ -4,8 +4,8 @@ export default function Experience() {
   const isDarkMode = useSelector((state: any) => state.DarkMode.value);
 
   return (
-    <div className="md:my-12 my-5 w-full px-10">
-      <div className=" w-full  lg:flex-row flex-col gap-4 place-content-center lg:h-[200px] flex justify-evenly items-center lg:space-x-3">
+    <div className="md:my-12 my-5 w-full xs:px-10 px-2">
+      <div className=" w-full  lg:flex-row flex-col gap-4 place-content-center lg:h-[200px] flex justify-evenly items-center lg:space-x-3 p-8">
         <div className={`lg:w-[400px] w-full  `}>
           <h1 className="font-semibold md:text-4xl text-3xl font-franklin mb-1">
             Ninjas Code

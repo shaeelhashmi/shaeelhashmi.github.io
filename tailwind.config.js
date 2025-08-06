@@ -11,7 +11,7 @@ export default {
         invinsible: '0 0 0 0 transparent',
       },
       screens: {
-        'xs':  {'max': '500px' }, 
+        'xs':  {'min': '500px' }, 
         'xsh': { 'raw': '(min-height: 520px)' },
       },
       fontFamily: {

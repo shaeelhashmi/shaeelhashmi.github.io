@@ -11,7 +11,7 @@ export default function Contact({GetintouchRef}: ContactProps) {
   const isDarkMode = useSelector((state: any) => state.DarkMode.value);
   return (
     <section
-      className="mx-auto z-10 min-h-fit overflow-hidden flex flex-col items-center justify-center px-4 py-10"
+      className="mx-auto  z-10 min-h-fit  overflow-hidden flex flex-col items-center justify-center "
       id="contact"
       data-translate="translate-x-64"
       ref={GetintouchRef}
@@ -23,7 +23,7 @@ export default function Contact({GetintouchRef}: ContactProps) {
         Feel free to reach out for collaborations, projects, or any ideas that
         you have. I’m always open to new opportunities and conversations.
       </p>
-      <div className="flex  items-center justify-center flex-wrap gap-4">
+      <div className="flex  items-center justify-center flex-wrap gap-4 xs:px-10 px-2">
         <div>
       <a href="https://www.fiverr.com/s/8zNZXbv" className="mx-5" target="_blank">
 
@@ -72,7 +72,7 @@ export default function Contact({GetintouchRef}: ContactProps) {
           </div>
    
           </div>
-                    <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-700'} mt-12`}>
+                    <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-700'} my-12`}>
       ©  Powered by Shaeel Hashmi
     </p>
     </section>
