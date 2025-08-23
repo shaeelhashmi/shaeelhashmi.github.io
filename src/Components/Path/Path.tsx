@@ -1,10 +1,13 @@
 import { lazy,useRef } from 'react'
-const Home= lazy(() => import('../Home'))
 const Hero= lazy(() => import('../Hero'))
-const Contact= lazy(() => import('../Contact'))
+const Contact= lazy(() => import('../Contact/Contact'))
 import { useGSAP } from '@gsap/react';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
+import Introduction from '../Intro/Introduction';
 import gsap from 'gsap';
+const Experience = lazy(() => import('../Experience'));
+const Project = lazy(() => import('../Projects/Project'));
+const SkillSection = lazy(() => import('../Skills/SkillSection'));
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 export default function Path() {
         // Create refs for each section
@@ -88,10 +91,24 @@ export default function Path() {
 })
   return (
     <div ref={main} >
-
-        <Hero aboutRef={aboutRef} />
-        <Home skillRef={skillRef} projectRef={projectRef} ExperienceRef={ExperienceRef} frontendSkillRef={frontendSkillRef} backendSkillRef={backendSkillRef} databaseSkillRef={databaseSkillRef} otherSkillRef={otherSkillRef}/>
-        <Contact GetintouchRef={GetintouchRef} />
+<div className="mt-10 mb-5">
+        <Hero  />
+</div>
+<div className="my-5 sm:mx-10 mx-4">
+  <Introduction aboutRef={aboutRef} />
+</div>
+<div className="my-5 sm:mx-10 mx-4">
+  <Experience ExperienceRef={ExperienceRef} />
+</div>
+<div className="my-5 sm:mx-10 mx-4">
+  <Project projectRef={projectRef} />
+</div>
+<div className="my-5 sm:mx-10 mx-4">
+  <SkillSection skillRef={skillRef} frontendSkillRef={frontendSkillRef} backendSkillRef={backendSkillRef} databaseSkillRef={databaseSkillRef} otherSkillRef={otherSkillRef} />
+</div>
+<div className="my-5 sm:mx-10 mx-4">
+  <Contact GetintouchRef={GetintouchRef} />
+</div>
     </div>
   )
 }

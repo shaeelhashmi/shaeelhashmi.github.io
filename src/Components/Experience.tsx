@@ -1,12 +1,14 @@
 import { useSelector } from "react-redux";
 
-export default function Experience() {
+export default function Experience({ExperienceRef}: {ExperienceRef: React.RefObject<HTMLDivElement>}) {
   const isDarkMode = useSelector((state: any) => state.DarkMode.value);
 
   return (
-    <div className="md:my-12 my-5 w-full xs:px-10 px-2">
-      <div className=" w-full  lg:flex-row flex-col gap-4 place-content-center lg:h-[200px] flex justify-evenly items-center lg:space-x-3 p-8">
-        <div className={`lg:w-[400px] w-full  `}>
+     <section  ref={ExperienceRef} data-translate="-translate-x-64" id="Experience">
+        <h1 className="md:text-6xl text-5xl font-bold   font-heading  text-center">Experience</h1>   
+
+      <div className=" w-full  grid lg:grid-cols-[auto_auto_1fr]  grid-cols-1 gap-10 mt-10 sm:p-8 px-2 py-1">
+        <div className={` w-full  `}>
           <h1 className="font-semibold md:text-4xl text-3xl font-franklin mb-1">
             Ninjas Code
           </h1>
@@ -20,18 +22,17 @@ export default function Experience() {
             March 2025 - April 2025
           </p>
         </div>
-            <div className={`h-full ${isDarkMode?"bg-[#2a2aff] shadow-[0_0_30px_#2a2aff] ":"bg-[#dba2ff] shadow-[0_0_10px_#dba2ff]"} w-[5px]  transition-all lg:block hidden rounded-2xl`}/>
-        <div > 
-        
-      <h1 className="text-2xl font-subheading font-semibold">What I did</h1>
-      <ul className="list-disc list-inside md:text-lg text-base font-calibri pl-10">
+      <div className={`h-full ${isDarkMode?"bg-[#2a2aff] shadow-[0_0_30px_#2a2aff] ":"bg-[#dba2ff] shadow-[0_0_10px_#dba2ff]"} w-[5px]  transition-all lg:block hidden rounded-2xl`}/>
+      <div className="">   
+      <h1 className="xs:text-2xl text-xl font-subheading font-semibold">What I did</h1>
+      <ul className="list-disc list-inside md:text-lg text-base font-calibri pl-1 sm:pl-8">
     <li className="my-1">Created issues on forked repositories to help boost the SEO performance of the original repositories.</li>
     <li className="my-1">Opened 40 issues and merged 40 Dependabot pull requests on a daily basis.</li>
     <li className="my-1">Developed an automation script to streamline issue creation, reducing manual effort by approximately 30%.</li>
     <li className="my-1">Tracked and maintained repository traffic data using Google Sheets.</li>
   </ul>
-        </div>
-      </div>
     </div>
+      </div>
+    </section>
   );
 }

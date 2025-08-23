@@ -6,7 +6,7 @@ export default function CTABtn() {
 ) => {
   e.preventDefault();
 
-  const navHeight = 64; // px — adjust as needed
+  const navHeight = 80; // px — adjust as needed
 
   let targetY = 0;
   if (name !== "#") {

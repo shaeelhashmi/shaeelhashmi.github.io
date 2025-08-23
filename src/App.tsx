@@ -31,7 +31,7 @@ useEffect(() => {
      <NavBar></NavBar>
     <div className="relative flex flex-col items-center justify-center w-screen min-h-screen m-0 overflow-x-hidden">
         <Suspense fallback={<Loader />}>
-      <div className={`w-full ${darkMode ? "text-white" : "text-black"}`}>
+      <div className={`w-dvw ${darkMode ? "text-white" : "text-black"}`}>
         <Path />
       </div>
   
