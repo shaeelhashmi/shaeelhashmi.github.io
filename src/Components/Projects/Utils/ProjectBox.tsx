@@ -31,7 +31,7 @@ export default function ProjectBox(props: props) {
         
         <div className="relative z-10  flex flex-col justify-between">
           <div>
-            <h1 className="font-semibold text-center xs:text-2xl text-xl font-subheading">{props.Title}</h1>
+            <h3 className="font-semibold text-center xs:text-2xl text-xl font-subheading">{props.Title}</h3>
           </div>
           <div className=" font-calibri">
             <p className="md:text-lg text-base mt-5">{props.description}</p>
