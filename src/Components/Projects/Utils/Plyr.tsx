@@ -3,7 +3,7 @@ import Plyr from "plyr-react"
 
 export default React.memo(function PlyrComponent(props:{image:string}) {
     return (
-     <div className="w-full  rounded-t-lg ">
+
      <Plyr
                      style={{ width: "100%", height: "100%", borderTopLeftRadius: "0.5rem", borderTopRightRadius: "0.5rem" }} 
                         source={{
@@ -20,7 +20,7 @@ export default React.memo(function PlyrComponent(props:{image:string}) {
                             controls: ["play", "progress", "mute", "volume", "fullscreen"],
                         }}
                     />
-                </div>
+
                 
     )
 })

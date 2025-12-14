@@ -1,24 +1,36 @@
 import { useSelector } from "react-redux"
 import "plyr-react/plyr.css"
 import PlyrComponent from "./Plyr"
+
 interface props {
   Title: string;
   Link: string;
   description: string;
   image: string; // optional, in case you want fallback image
   SVG: React.ComponentType<{ sizeClass?: string;}> [];
+  isVideo: boolean;
+  img?: string;
 }
 
 export default function ProjectBox(props: props) {
   const isDarkMode = useSelector((state: any) => state.DarkMode.value);
 
   return (
-    <div className={`grid grid-rows-[auto_1fr_auto] ${isDarkMode ? 'bg-purple-900/10' : 'bg-fuchsia-400/20'} rounded-lg`}>
+    <div className={`grid grid-rows-[auto_1fr_auto] ${isDarkMode ? 'bg-purple-900/10' : 'bg-fuchsia-400/20'} rounded-lg pb-5`}>
       
       
         
-          <PlyrComponent image={props.image} />
-        
+        <div className="w-full aspect-video rounded-t-lg overflow-hidden">
+  {props.isVideo ? (
+    <PlyrComponent image={props.image} />
+  ) : (
+    <img
+      src={props.img}
+      className="w-full h-full object-cover"
+      alt={props.Title}
+    />
+  )}
+</div>
    
 
       {/* Content Section */}
@@ -45,14 +57,27 @@ export default function ProjectBox(props: props) {
       </div>
 
       {/* Footer Link */}
-      <div className="w-full font-calibri z-10">
+      <div className="w-full font-calibri z-10 grid md:grid-cols-2 grid-cols-1 gap-3 xs:px-8 px-5 ">
         <a
           href={props.Link}
-          className="block w-full py-2 text-center transition-all duration-500 bg-blue-700 hover:bg-blue-600 text-white rounded-b-lg font-serif font-[500]"
+          className="block w-full py-2 text-center transition-all duration-500 bg-blue-700 hover:bg-blue-600 text-white  font-serif font-[500] rounded-md"
           target="_blank"
         >
-          View Source Code
+          Source Code
         </a>
+        {props.isVideo ?<a
+          href={`https://www.youtube.com/watch?v=${props.image}`}
+          className="block w-full py-2 text-center transition-all duration-500 bg-red-700 hover:bg-red-600 text-white  font-serif font-[500] rounded-md"
+          target="_blank"
+        >
+          Youtube demo
+        </a>:<a
+          href={`${props.image}`}
+          className="block w-full py-2 text-center transition-all duration-500 bg-gray-900 hover:bg-gray-800 text-white  font-serif font-[500] rounded-md"
+          target="_blank"
+        >
+          Kaggle link
+        </a>}
       </div>
     </div>
   )
