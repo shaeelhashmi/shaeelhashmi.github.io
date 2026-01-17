@@ -48,9 +48,9 @@
 .card::after, .card::before{
   content: '';
   position: absolute;
-  /* height: 105%;
-  width: 105%; */
-  background-image: conic-gradient(from var(--angle), transparent 70%,blue);
+   height: 105%;
+  width: 105%; 
+   background-image: conic-gradient(from var(--angle), transparent 70%,blue);
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -64,7 +64,7 @@
 }
 .card.dark-mode::after,
 .card.dark-mode::before {
-  background-image: conic-gradient(from var(--angle), transparent 70%, #daa4ff); /* or another dark-mode color */
+  background-image: conic-gradient(from var(--angle), transparent 70%, #e5beff); /* or another dark-mode color */
 }
 @keyframes spin{
   from{
@@ -73,7 +73,8 @@
   to{
     --angle: 360deg;
   }
-}
+} 
+
 .line::after{
  content: '';
   position: absolute;

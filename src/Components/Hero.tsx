@@ -34,7 +34,7 @@ export default function Hero() {
           </a>
       </div> 
     </div>
-      <ParticleDesign />
+      {/* <ParticleDesign /> */}
       <Canvas1 />
       <CTABtn />
     </div>
