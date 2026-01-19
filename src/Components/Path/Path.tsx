@@ -94,19 +94,19 @@ export default function Path() {
 <div className="mt-10 mb-5">
         <Hero  />
 </div>
-<div className="my-5 sm:mx-10 mx-4">
+<div className="my-5 xs:mx-20 sm:mx-28   md:mx-5 lg:mx-20 mx-4">
   <Introduction aboutRef={aboutRef} />
 </div>
-<div className="my-5 sm:mx-10 mx-4">
+<div className="my-5 xs:mx-20 sm:mx-28   md:mx-5 lg:mx-20 mx-4">
   <Experience ExperienceRef={ExperienceRef} />
 </div>
-<div className="my-5 sm:mx-10 mx-4">
+<div className="my-5 xs:mx-20  sm:mx-28  md:mx-5 lg:mx-20 mx-4">
   <Project projectRef={projectRef} />
 </div>
-<div className="my-5 sm:mx-10 mx-4">
+<div className="my-5 xs:mx-20 sm:mx-28   md:mx-5 lg:mx-20 mx-4">
   <SkillSection skillRef={skillRef} frontendSkillRef={frontendSkillRef} backendSkillRef={backendSkillRef} databaseSkillRef={databaseSkillRef} otherSkillRef={otherSkillRef} />
 </div>
-<div className="my-5 sm:mx-10 mx-4">
+<div className="my-5 xs:mx-20  sm:mx-28  md:mx-5 lg:mx-20 mx-4 ">
   <Contact GetintouchRef={GetintouchRef} />
 </div>
     </div>

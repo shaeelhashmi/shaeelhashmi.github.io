@@ -19,7 +19,7 @@ export default function Project(props:{projectRef: React.RefObject<HTMLDivElemen
   return (
     <section   ref={props.projectRef} data-translate="translate-x-64" id="Projects">
     <h1 className="font-bold   font-heading md:text-6xl text-5xl  text-center ">Projects</h1>
-    <div className="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 font-franklin   xl:gap-20 lg:gap-32 gap-16 md:gap-8 mt-10">
+    <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 font-franklin   xl:gap-20 lg:gap-32 gap-8 md:gap-8 mt-10">
 
        <ProjectBox description="A real-time chat application that enables users to exchange messages instantly, manage friend requests seamlessly, and securely store user information for continuous and reliable access to user data." Title='Chat application'   Link="https://github.com/shaeelhashmi/Chat-application"  SVG={[Ts,Tailwind,ReactSVG, GoSvg,MySql]} image={"6v7y6cmazsw"} isVideo={true}/>
        <ProjectBox description="This project delivers a personalized news recommendation system that curates articles based on individual user interests, manages user accounts, and gathers content from various online sources." Title='Recommendation algorithm'   Link="https://github.com/shaeelhashmi/news-recommendation-algorithm" SVG={[Ts,Tailwind,ReactSVG, GoSvg,MySql]} image={"Fy6Hpvvko6E"} isVideo={true}/>

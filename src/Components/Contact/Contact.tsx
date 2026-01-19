@@ -22,11 +22,11 @@ export default function Contact({GetintouchRef}: ContactProps) {
         Feel free to reach out for collaborations, projects, or any ideas that
         you have. I’m always open to new opportunities and conversations.
       </p>
-      <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 sm:gap-8 lg:gap-10 mt-5">
-        <div>
+      <div className="grid lg:grid-cols-3 md:grid-cols-2  grid-cols-1 gap-5 sm:gap-8 lg:gap-10 mt-5">
+      <div>
       <a href="https://www.fiverr.com/s/8zNZXbv" target="_blank">
 
-          <SkillBox size="sm:max-w-[320px] lg:max-w-full"  svg={<div className="flex items-center justify-center gap-4 w-full ">
+          <SkillBox size=" lg:max-w-full" svg={<div className="flex items-center justify-center gap-4 w-full ">
             <Fiverr/>
             <div className="flex flex-col">
                 <h3 className="font-semibold text-2xl font-subheading">Fiverr</h3>
@@ -40,7 +40,7 @@ export default function Contact({GetintouchRef}: ContactProps) {
             </div>
             <div>
             <a href="https://www.upwork.com/freelancers/~011e1744278fd5fcd2" target="_blank">
-           <SkillBox size="sm:max-w-[320px] lg:max-w-full" svg={
+           <SkillBox size=" lg:max-w-full" svg={
             <div className="flex items-center justify-center gap-4 ">
             <Upwork/>
             <div >
@@ -52,10 +52,10 @@ export default function Contact({GetintouchRef}: ContactProps) {
             </div>
             </div>}></SkillBox></a>
             </div>
-            <div className="lg:col-span-1 sm:col-span-2 col-span-1 mx-auto">
+            <div className="md:col-span-2 lg:col-span-1 col-span-1 md:mx-auto">
           
-                     <a href="mailto:shaeelhashmi332@gmail.com" target="_blank">
-            <SkillBox size="sm:max-w-[320px] lg:max-w-full" svg={
+            <a href="mailto:shaeelhashmi332@gmail.com" target="_blank">
+            <SkillBox size=" lg:max-w-full md:w-fit" svg={
                 <div className="flex items-center justify-center gap-4 ">
                     <Google/>
                      <div >
