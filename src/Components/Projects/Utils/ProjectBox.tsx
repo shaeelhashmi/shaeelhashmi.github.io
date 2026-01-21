@@ -6,7 +6,7 @@ interface props {
   Title: string;
   Link: string;
   description: string;
-  image: string; // optional, in case you want fallback image
+  image: string; 
   SVG: React.ComponentType<{ sizeClass?: string;}> [];
   isVideo: boolean;
   img?: string;
