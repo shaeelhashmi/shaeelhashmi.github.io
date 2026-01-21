@@ -1,5 +1,4 @@
 import Canvas1 from "./Hero/Utils/Canvas1"
-import ParticleDesign from "./ParticleDesign"
 import { ReactTyped } from "react-typed"
 import Github from "./SVG/Github";
 import LinkedIn from "./SVG/Linkedin";
@@ -34,7 +33,6 @@ export default function Hero() {
           </a>
       </div> 
     </div>
-      {/* <ParticleDesign /> */}
       <Canvas1 />
       <CTABtn />
     </div>

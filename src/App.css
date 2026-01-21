@@ -64,7 +64,7 @@
 }
 .card.dark-mode::after,
 .card.dark-mode::before {
-  background-image: conic-gradient(from var(--angle), transparent 70%, #e5beff); /* or another dark-mode color */
+  background-image: conic-gradient(from var(--angle), transparent 70%, #bfbdfb); /* or another dark-mode color */
 }
 @keyframes spin{
   from{

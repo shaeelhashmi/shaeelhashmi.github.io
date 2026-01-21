@@ -7,11 +7,15 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: '#12045336',
+        lightPrimary:'#a1a4fc33'
+      },
       boxShadow: {
         invinsible: '0 0 0 0 transparent',
       },
       screens: {
-        'xs':  {'min': '500px' }, 
+        'xs':  {'min': '500px', 'max': '639px'}, 
         'xsh': { 'raw': '(min-height: 520px)' },
       },
       fontFamily: {

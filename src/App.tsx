@@ -12,14 +12,14 @@ export default function App() {
 useEffect(() => {
   const body = document.body;
   if (darkMode) {
-    body.style.background = "linear-gradient(90deg, #000000, #12001a,#000000)";
-    body.style.backgroundColor = "black";
+    // body.style.background = "linear-gradient(90deg, #000000, #12001a,#000000)";
+    body.style.backgroundColor = "#04000f";
     document.querySelectorAll('.loader-square').forEach(el => {
       (el as HTMLElement).style.background = "white";
     });
   } else {
-    body.style.background = "linear-gradient(90deg, #f5f5f5, #f7e8fd, #f5f5f5)";
-    body.style.backgroundColor = "rgb(255, 255, 255)";
+    // body.style.background = "linear-gradient(90deg, #f5f5f5, #f7e8fd, #f5f5f5)";
+    body.style.backgroundColor = "rgb(237, 236, 255)";
     document.querySelectorAll('.loader-square').forEach(el => {
       (el as HTMLElement).style.background = "black";
     });

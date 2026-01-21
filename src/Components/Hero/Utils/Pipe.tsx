@@ -26,7 +26,7 @@ export default function Pipe(props: any) {
   ], true);
 
   const { camera, scene } = useThree();
-  scene.fog = new THREE.Fog(isDarkMode?0x12001a:0xf7e8fd, 3, 4);
+  scene.fog = new THREE.Fog(isDarkMode?0x04000f:0xf7e8fd, 3, 4);
   // Dispose of geometry and material on unmount to prevent memory leaks
 
   useFrame(() => {
