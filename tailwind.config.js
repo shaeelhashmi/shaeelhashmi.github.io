@@ -9,6 +9,7 @@ export default {
     extend: {
       colors: {
         primary: '#12045336',
+        lightPrimary:'#a1a4fc33'
       },
       boxShadow: {
         invinsible: '0 0 0 0 transparent',

@@ -22,7 +22,7 @@ export default function Experience({ExperienceRef}: {ExperienceRef: React.RefObj
             March 2025 - April 2025
           </p>
         </div>
-      <div className={`h-full ${isDarkMode?"bg-[#2a2aff] shadow-[0_0_30px_#2a2aff] ":"bg-[#dba2ff] shadow-[0_0_10px_#dba2ff]"} w-[5px]  transition-all lg:block hidden rounded-2xl`}/>
+      <div className={`h-full ${isDarkMode?"bg-[#2a2aff] shadow-[0_0_30px_#2a2aff] ":"bg-[#a2a8ff] shadow-[0_0_10px_#a2a8ff]"} w-[5px]  transition-all lg:block hidden rounded-2xl`}/>
       <div className="">   
       <h3 className="xs:text-2xl text-xl font-subheading font-semibold">What I did</h3>
       <ul className="list-disc list-inside md:text-lg text-base font-calibri pl-1 sm:pl-8">

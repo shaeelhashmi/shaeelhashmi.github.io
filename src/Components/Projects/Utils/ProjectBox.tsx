@@ -16,7 +16,7 @@ export default function ProjectBox(props: props) {
   const isDarkMode = useSelector((state: any) => state.DarkMode.value);
 
   return (
-    <div className={`grid grid-rows-[auto_1fr_auto] ${isDarkMode ? 'bg-primary' : 'bg-fuchsia-400/20'} rounded-lg pb-5`}>
+    <div className={`grid grid-rows-[auto_1fr_auto] ${isDarkMode ? 'bg-primary' : 'bg-lightPrimary'} rounded-lg pb-5`}>
       
       
         

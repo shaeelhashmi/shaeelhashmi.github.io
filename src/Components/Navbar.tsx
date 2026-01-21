@@ -52,7 +52,7 @@ const handleLinkClick = (
 };
 
   return (
-    <nav className={` fixed top-0 w-full z-50 md:flex items-center md:justify-evenly justify-end p-2   ${darkMode ?"bg-[rgb(5,5,18)] text-white":"bg-[#fffbff] text-black"} transition-all duration-300 grid grid-cols-2`}>
+    <nav className={` fixed top-0 w-full z-50 md:flex items-center md:justify-evenly justify-end p-2   ${darkMode ?"bg-[rgb(5,5,18)] text-white":"bg-[#f2f2fa] text-black"} transition-all duration-300 grid grid-cols-2`}>
       <div className="flex items-center justify-start p-3">
        
         <span ><Logo/></span>
