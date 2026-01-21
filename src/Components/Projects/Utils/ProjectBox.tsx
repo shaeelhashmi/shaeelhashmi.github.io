@@ -70,13 +70,13 @@ export default function ProjectBox(props: props) {
           className="block w-full py-2 text-center transition-all duration-500 bg-red-700 hover:bg-red-600 text-white  font-serif font-[500] rounded-md"
           target="_blank"
         >
-          Youtube demo
+          Youtube Demo
         </a>:<a
           href={`${props.image}`}
           className="block w-full py-2 text-center transition-all duration-500 bg-gray-900 hover:bg-gray-800 text-white  font-serif font-[500] rounded-md"
           target="_blank"
         >
-          Kaggle link
+          Kaggle Link
         </a>}
       </div>
     </div>

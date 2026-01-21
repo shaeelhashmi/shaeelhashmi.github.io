@@ -13,10 +13,10 @@ export default function Hero() {
          <ReactTyped
     className="text-2xl sm:text-3xl  font-medium  mb-5 w-3/4 text-center font-times  z-20  h-10"
       strings={[
-        "Full-stack web developer",
-        "Software engineer",
-        "CS student",
-        "Open-source enthusiast",
+        "Full-Stack Web Developer",
+        "Software Engineer",
+        "CS Student",
+        "Open-Source Enthusiast",
       ]}
       typeSpeed={40}
       backSpeed={50}
