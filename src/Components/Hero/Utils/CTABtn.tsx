@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import {useSelector} from "react-redux";
 export default function CTABtn() {
   const handleLinkClick = (
   e: React.MouseEvent<HTMLAnchorElement>,
@@ -23,18 +24,19 @@ export default function CTABtn() {
     ease: "linear",
   });
 };
+const selector=useSelector((state:any)=>state.DarkMode.value);
   return (
 
   <div  className="relative group">
     <a
-       className="relative inline-block p-px font-semibold leading-6 text-white bg-gray-800  cursor-pointer rounded-xl transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95"
+       className={`relative inline-block p-px font-semibold leading-6  ${selector ? "text-white bg-gray-800" : "text-black bg-[#b0b1b4]"} cursor-pointer rounded-xl transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95`}
        onClick={(e) => handleLinkClick(e, "about")}
     >
       <span
-         className="absolute inset-0 rounded-xl bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+         className={`absolute inset-0 rounded-xl bg-gradient-to-r ${selector ? "from-teal-400 via-blue-500 to-purple-500" : "from-teal-600 via-blue-600 to-purple-600"} p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100`}
       ></span>
 
-      <span  className="relative z-10 block px-6 py-3 rounded-xl bg-gray-950">
+      <span  className={`relative z-10 block px-6 py-3 rounded-xl ${selector ? "bg-gray-950" : "bg-[#f5f5ff]"}`}>
         <div  className="relative z-10 flex items-center space-x-2">
           <span  className="transition-all duration-500 group-hover:translate-x-1 font-franklin text-lg "
             >Let's get started</span>
