@@ -33,10 +33,10 @@ const selector=useSelector((state:any)=>state.DarkMode.value);
        onClick={(e) => handleLinkClick(e, "about")}
     >
       <span
-         className={`absolute inset-0 rounded-xl bg-gradient-to-r ${selector ? "from-teal-400 via-blue-500 to-purple-500" : "from-teal-600 via-blue-600 to-purple-600"} p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100`}
+         className={`absolute inset-0 rounded-xl bg-gradient-to-r ${selector ? "from-teal-400 via-blue-500 to-purple-500" : "from-indigo-400 via-blue-500 to-cyan-400"} p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100`}
       ></span>
 
-      <span  className={`relative z-10 block px-6 py-3 rounded-xl ${selector ? "bg-gray-950" : "bg-[#f5f5ff]"}`}>
+      <span  className={`relative z-10 block px-6 py-3 rounded-xl ${selector ? "bg-gray-950" : "bg-[#e1e1ff]"}`}>
         <div  className="relative z-10 flex items-center space-x-2">
           <span  className="transition-all duration-500 group-hover:translate-x-1 font-franklin text-lg "
             >Let's get started</span>

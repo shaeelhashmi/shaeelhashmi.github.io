@@ -27,12 +27,13 @@ export default function Path() {
         // Check data-translate attribute for each ref
         const translateX = ref.current?.getAttribute('data-translate') === '-translate-x-64' ? 400 : -400;
         if (ref.current) {
-          gsap.fromTo(ref.current, { opacity: 0, x: translateX }, {
+          gsap.fromTo(ref.current, { opacity: 0 , y:30 }, {
             opacity: 1,
-            x: 0,
+            // x: 0,
+            y:0,
             duration: 1,
             ease: "power2.out",
-            immediateRender: true,
+            // immediateRender: true,
             scrollTrigger: {
               trigger: ref.current,
               start: "top 80%",
@@ -47,12 +48,13 @@ export default function Path() {
       otherElements.forEach((ref) => {
         if (ref.current) {
           const translateX = ref.current.getAttribute('data-translate') === 'translate-x-64' ? -400 : 400;
-          gsap.fromTo(ref.current, { opacity: 0, x: translateX }, {
+          gsap.fromTo(ref.current, { opacity: 0, y:ref==GetintouchRef?0:30 }, {
             opacity: 1,
-            x: 0,
+            // x: 0,
             duration: 1,
+            y:0,
             ease: "sine.out",
-            immediateRender: true,
+            // immediateRender: true,
             scrollTrigger: {
               trigger: ref.current,
               start: "top 80%",
@@ -66,9 +68,10 @@ export default function Path() {
           directDivChildren.forEach((child) => {
             const index = Array.from(directDivChildren).indexOf(child as Element);
             const xPos = ref.current?.getAttribute('data-translate') === 'translate-x-64' ? index % 2 === 0 ? 400 : -400 : index % 2 === 0 ? -400 : 400;
-            gsap.fromTo(child, { opacity: 0, x: xPos }, {
+            gsap.fromTo(child, { opacity: 0, y:ref==GetintouchRef?0:30  }, {
               opacity: 1,
               x: 0,
+              y:0,
               duration: 0.5,
               ease: "power1.out",        
               scrollTrigger: {
