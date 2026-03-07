@@ -24,8 +24,6 @@ export default function Path() {
        useGSAP(() => {
         const elements= [skillRef, frontendSkillRef, backendSkillRef, databaseSkillRef, otherSkillRef];
       elements.forEach((ref) => {
-        // Check data-translate attribute for each ref
-        const translateX = ref.current?.getAttribute('data-translate') === '-translate-x-64' ? 400 : -400;
         if (ref.current) {
           gsap.fromTo(ref.current, { opacity: 0 , y:30 }, {
             opacity: 1,
@@ -47,7 +45,6 @@ export default function Path() {
       const otherElements=[ExperienceRef, GetintouchRef,projectRef,aboutRef];
       otherElements.forEach((ref) => {
         if (ref.current) {
-          const translateX = ref.current.getAttribute('data-translate') === 'translate-x-64' ? -400 : 400;
           gsap.fromTo(ref.current, { opacity: 0, y:ref==GetintouchRef?0:30 }, {
             opacity: 1,
             // x: 0,
@@ -66,8 +63,6 @@ export default function Path() {
         const directDivChildren = ref.current?.querySelectorAll(':scope > div > div ');
         if (directDivChildren && ref.current) {
           directDivChildren.forEach((child) => {
-            const index = Array.from(directDivChildren).indexOf(child as Element);
-            const xPos = ref.current?.getAttribute('data-translate') === 'translate-x-64' ? index % 2 === 0 ? 400 : -400 : index % 2 === 0 ? -400 : 400;
             gsap.fromTo(child, { opacity: 0, y:ref==GetintouchRef?0:30  }, {
               opacity: 1,
               x: 0,
