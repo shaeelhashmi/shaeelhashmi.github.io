@@ -55,7 +55,7 @@ export default function Contact({GetintouchRef}: ContactProps) {
             <div className="md:col-span-2 lg:col-span-1 col-span-1 md:mx-auto">
           
             <a href="mailto:shaeelhashmi332@gmail.com" target="_blank">
-            <SkillBox size=" lg:max-w-full md:w-fit" duration="before:duration-1000" svg={
+            <SkillBox size=" lg:max-w-full" duration="before:duration-1000" svg={
                 <div className="flex items-center justify-center gap-4 ">
                     <Google/>
                      <div >

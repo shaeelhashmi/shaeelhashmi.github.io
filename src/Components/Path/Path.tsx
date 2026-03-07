@@ -45,7 +45,7 @@ export default function Path() {
       const otherElements=[ExperienceRef, GetintouchRef,projectRef,aboutRef];
       otherElements.forEach((ref) => {
         if (ref.current) {
-          gsap.fromTo(ref.current, { opacity: 0, y:ref==GetintouchRef?0:30 }, {
+          gsap.fromTo(ref.current, { opacity: 0, y:30 }, {
             opacity: 1,
             // x: 0,
             duration: 1,
@@ -54,7 +54,7 @@ export default function Path() {
             // immediateRender: true,
             scrollTrigger: {
               trigger: ref.current,
-              start: "top 80%",
+              start: ref==GetintouchRef ? "top 90%": "top 80%",
               toggleActions: "play none none none",
               once: true,
             }
@@ -63,7 +63,7 @@ export default function Path() {
         const directDivChildren = ref.current?.querySelectorAll(':scope > div > div ');
         if (directDivChildren && ref.current) {
           directDivChildren.forEach((child) => {
-            gsap.fromTo(child, { opacity: 0, y:ref==GetintouchRef?0:30  }, {
+            gsap.fromTo(child, { opacity: 0, y:30  }, {
               opacity: 1,
               x: 0,
               y:0,
@@ -71,7 +71,7 @@ export default function Path() {
               ease: "power1.out",        
               scrollTrigger: {
                 trigger: child,
-                start: "top 80%",
+                start: ref==GetintouchRef ? "top 110%" : "top 80%",
                 toggleActions: "play none none none",
                 once: true,
               },
