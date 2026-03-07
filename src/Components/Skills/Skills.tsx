@@ -11,7 +11,7 @@ export default function Skills(props: SkillsProps) {
       <h2 className="font-semibold  md:text-4xl text-3xl h-[50px]  font-franklin text-center mt-5">{props.title}</h2>
 <div className="flex flex-wrap justify-center gap-10 w-full">
   {props.skills.map((skill, index) => (
-    <SkillBox key={index} svg={skill} />
+    <SkillBox key={index} svg={skill} cursor="cursor-auto"/>
   ))}
 </div>
 
