@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import SkillBox from "./Skills/Utils/SkillBox";
 
 // 1. Define the TypeScript interface for your data structure
 interface ExperienceItem {
@@ -11,7 +10,7 @@ interface ExperienceItem {
   bulletPoints: string[];
 }
 
-export default function Experience({ ExperienceRef }: { ExperienceRef: React.RefObject<HTMLElement | null> }) {
+export default function Experience({ ExperienceRef }: { ExperienceRef: React.RefObject<HTMLElement> }) {
   const isDarkMode = useSelector((state: any) => state.DarkMode.value);
   
   // 2. Set up state to hold the fetched JSON data
