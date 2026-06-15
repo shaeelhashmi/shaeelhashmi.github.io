@@ -38,7 +38,7 @@ export default function ProjectBox(props: props) {
         backdrop-blur-[2px]
         before:content-[''] before:absolute before:top-0 before:left-0 before:w-[60%] before:h-[85%] 
         before:bg-[#ffffff3f] before:skew-x-[60deg] before:scale-150 before:-translate-x-[400%] 
-        before:transition-transform before:duration-[600ms] before:pointer-events-none before:-z-50
+        before:transition-transform before:duration-[1500ms] before:pointer-events-none before:-z-50
         hover:before:translate-x-[340%] overflow-hidden  my-2 xs:p-8 p-5`}>
         
         <div className="relative z-10  flex flex-col justify-between">

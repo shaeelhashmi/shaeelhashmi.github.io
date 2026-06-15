@@ -7,17 +7,17 @@ export default function Introduction({ aboutRef }: { aboutRef: React.RefObject<H
 
              <div className="grid lg:grid-cols-3 grid-cols-1 gap-5 sm:gap-8 lg:gap-10 mt-10">
           <div className="hover:scale-105 transition-all duration-300 ease-in-out rounded-xl  lg:col-span-3 col-span-1 ">
-             <Cards className=" " scaleX="before:scale-x-50" duration="before:duration-[1500ms]">
+             <Cards className="xl:hidden block" scaleX="before:scale-x-50" duration="before:duration-[1500ms]">
           <h2 className="font-semibold md:text-4xl text-3xl font-franklin mb-1">
             Introduction
           </h2>
-          <p className="md:text-lg text-base text-left mt-5">
+          <p className="md:text-lg text-base text-left mt-5 ">
 I build full-stack web applications and automation tools that solve real-world problems, with a focus on clean architecture and scalable systems. I also work on AI/ML and deep learning projects.
 </p>
           </Cards>
           </div>
             <div className="hover:scale-105 transition-all duration-300 ease-in-out rounded-xl ">
-               <Cards duration="before:duration-1000">
+               <Cards duration="before:duration-[1500ms]">
                    <div >
           <h2 className="font-semibold md:text-4xl text-3xl font-franklin mb-1">
             Education
@@ -30,7 +30,7 @@ I build full-stack web applications and automation tools that solve real-world p
             </div>
             <div className="hover:scale-105 transition-all duration-300 ease-in-out rounded-xl ">
 
-              <Cards duration="before:duration-1000">
+              <Cards duration="before:duration-[1500ms]">
             <div>
            <h2 className="font-semibold md:text-4xl text-3xl font-franklin mb-1">
             Interests
@@ -44,7 +44,7 @@ I build full-stack web applications and automation tools that solve real-world p
            </Cards>
             </div>
             <div className="hover:scale-105 transition-all duration-300 ease-in-out rounded-xl ">
-            <Cards duration="before:duration-1000">
+            <Cards duration="before:duration-[1500ms]">
             <div>
            <h2 className="font-semibold md:text-4xl text-3xl font-franklin mb-1">
             Honors & Awards

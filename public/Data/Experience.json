@@ -1,0 +1,25 @@
+[
+  {
+    "company": "Ninjas Code",
+    "role": "Automation developer and SEO Intern",
+    "location": "Hybrid",
+    "duration": "March 2025 - April 2025",
+    "bulletPoints": [
+      "Created issues on forked repositories to help boost the SEO performance of the original repositories.",
+      "Opened 40 issues and merged 40 Dependabot pull requests on a daily basis.",
+      "Developed an automation script to streamline issue creation, reducing manual effort by approximately 30%.",
+      "Tracked and maintained repository traffic data using Google Sheets."
+    ]
+  },
+  {
+    "company": "Nexvative Technologies",
+    "role": "ML/DL Intern",
+    "location": "Hybrid",
+    "duration": "September 2025 - November 2025",
+    "bulletPoints": [
+      "Implemented a fine-tuning pipeline using Pytorch for a hindi Speech to text model.",
+      "Created multiple projects including a CNN based Image character classifer.",
+      "Provided research insights on implementing a multitenant architectures."
+    ]
+  }
+]

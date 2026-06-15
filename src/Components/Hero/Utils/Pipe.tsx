@@ -25,8 +25,16 @@ export default function Pipe(props: any) {
     new THREE.Vector3(-7, -5, -5),
   ], true);
 
-  const { camera, scene } = useThree();
-  scene.fog = new THREE.Fog(isDarkMode?0x04000f:0xedecff, 3, 4);
+const { camera, scene } = useThree();
+
+// 1. Determine fog distances based on screen width
+const isWideScreen = window.innerWidth > 1280;
+const fogNear = 3;
+const fogFar = isWideScreen ? 10 : 4; // Increases view distance from 4 to 10 on wide screens
+
+// 2. Apply fog color and dynamic constraints
+const fogColor = isDarkMode ? 0x04000f : 0xEDECFF;
+scene.fog = new THREE.Fog(fogColor, fogNear, fogFar);
   // Dispose of geometry and material on unmount to prevent memory leaks
 
   useFrame(() => {
