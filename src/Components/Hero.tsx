@@ -9,7 +9,7 @@ import Kaggle from "./SVG/Kaggle";
 export default function Hero() {
   const isDarkMode = useSelector((state: any) => state.DarkMode.value)
   return (
-    <header className="min-h-fit xl:mx-40 mx-0">
+    <header className="min-h-fit 2xl:mx-40 xl:mx-10 mx-0">
     <div className="relative   overflow-hidden flex items-center justify-end   min-h-[350px] py-10 lg:min-h-[500px] " >
     <div className="flex xl:items-start items-center justify-center w-full flex-col min-h-[300px] mt-10">
         <h1 className={`text-5xl md:text-6xl font-bold   
@@ -59,7 +59,7 @@ I build full-stack web applications and automation tools that solve real-world p
 
 
     </div>
-    <div className=" 2xl:px-10 xl:px-5 top-0 right-0 w-screen h-full xl:mt-10 xl:rounded-full  xl:static absolute p-0 flex justify-end ">
+    <div className=" xl:px-10 top-0 right-0 w-screen h-full xl:mt-10 xl:rounded-full  xl:static absolute p-0 flex justify-end ">
       <Canvas1 />
       {/* <AtomFinal/> */}
     </div>
